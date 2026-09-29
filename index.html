@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrgChemMap</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <style>
+      body { font-family: Arial, sans-serif; margin: 0; padding: 1rem; line-height: 1.4; }
+      h1 { margin-top: 0; }
+      #search { width: 100%; max-width: 420px; padding: 0.5rem; margin-bottom: 1rem; }
+      #cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; }
+      .card { border: 1px solid #ddd; border-radius: 8px; padding: 0.75rem; text-decoration: none; color: inherit; background: #fff; }
+      .card:hover { border-color: #999; }
+      #graph-wrap { margin-top: 2rem; perspective: 900px; }
+      #graph { position: relative; height: 300px; transform-style: preserve-3d; transform: rotateX(20deg) rotateY(-15deg); border: 1px dashed #ccc; border-radius: 8px; overflow: hidden; }
+      .node { position: absolute; width: 10px; height: 10px; border-radius: 50%; background: #2563eb; }
+    </style>
+  </head>
+  <body>
+    <h1>OrgChemMap</h1>
+    <input id="search" type="search" placeholder="Search chapter..." />
+    <section id="cards" aria-label="Chapter cards"></section>
+
+    <section id="graph-wrap" aria-label="3D chapter graph">
+      <h2>3D Chapter Graph</h2>
+      <div id="graph"></div>
+    </section>
+
+    <script src="assets/chapters.js"></script>
+    <script>
+      const search = document.getElementById("search");
+      const cards = document.getElementById("cards");
+      const graph = document.getElementById("graph");
+
+      function chapterHref(chapter) {
+        return `chapter/${chapter.className}/${chapter.file}`;
+      }
+
+      function renderCards(query = "") {
+        const q = query.trim().toLowerCase();
+        const filtered = window.ORG_CHEM_CHAPTERS.filter((chapter) =>
+          `${chapter.title} ${chapter.className}`.toLowerCase().includes(q)
+        );
+        cards.innerHTML = filtered
+          .map(
+            (chapter) =>
+              `<a class="card" href="${chapterHref(chapter)}"><strong>${chapter.title}</strong><br>${chapter.className.replace("class", "Class ")}</a>`
+          )
+          .join("");
+      }
+
+      function renderGraph() {
+        const list = window.ORG_CHEM_CHAPTERS;
+        graph.innerHTML = "";
+        if (!list.length) return;
+        list.forEach((chapter, index) => {
+          const angle = (index / list.length) * Math.PI * 2;
+          const x = 50 + Math.cos(angle) * 38;
+          const y = 50 + Math.sin(angle) * 32;
+          const z = (index % 6) * 20;
+          const node = document.createElement("a");
+          node.className = "node";
+          node.href = chapterHref(chapter);
+          node.title = chapter.title;
+          node.style.left = `${x}%`;
+          node.style.top = `${y}%`;
+          node.style.transform = `translate3d(-50%, -50%, ${z}px)`;
+          graph.appendChild(node);
+        });
+      }
+
+      search.addEventListener("input", (event) => renderCards(event.target.value));
+      renderCards();
+      renderGraph();
+    </script>
+  </body>
+</html>
