@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OrgChemMap - JEE Advanced Organic Chemistry</title><link rel="icon" href="assets/favicon.svg">
+<meta name="description" content="Interactive 3D map of Class 11-12 Organic Chemistry chapters for JEE Advanced.">
+<style>
+:root{--bg:#020212;--fg:#e8e8f5;--mut:#8b8ba8;--card:#0d0d24;--line:#26264a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+header{padding:20px 5vw 6px}h1{margin:0;font-size:1.6rem}.sub{margin:4px 0 0;color:var(--mut)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;padding:10px 5vw}
+input,button{background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+button.on{border-color:#fff}
+#graph{height:60vh;margin:0 5vw;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.hint{color:var(--mut);font-size:.85rem;padding:6px 5vw}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;padding:12px 5vw 40px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;color:inherit;text-decoration:none}
+.card:hover{border-color:#fff}.card.soon{opacity:.45;pointer-events:none}.tag{font-size:.78rem;color:var(--mut)}
+</style></head><body>
+<header><h1>OrgChemMap</h1><p class="sub">JEE Advanced Organic Chemistry, Class 11 &amp; 12. <span style="color:#f0a04b">&#9679; Class 11</span> <span style="color:#4b9df0">&#9679; Class 12</span> | dot size = weightage</p></header>
+<div class="bar"><input id="q" placeholder="Search chapters..."><button data-c="0" class="on">All</button><button data-c="11">Class 11</button><button data-c="12">Class 12</button></div>
+<div id="graph"></div><div class="hint">Drag to rotate, scroll to zoom, click a dot to open its chapter.</div>
+<div class="grid" id="grid"></div>
+<script src="assets/chapters.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph@1.73.4/dist/3d-force-graph.min.js"></script>
+<script>
+const C=window.CHAPTERS;let cls=0,q='';
+const col=c=>c.cls==11?'#f0a04b':'#4b9df0';
+const nodes=C.map(c=>({...c}));
+const links=[];C.forEach(c=>(c.links||[]).forEach(t=>{if(C.some(x=>x.id===t))links.push({source:c.id,target:t})}));
+const G=ForceGraph3D()(document.getElementById('graph')).graphData({nodes,links}).backgroundColor('#020212')
+ .nodeLabel(n=>n.title+' (Class '+n.cls+')'+(n.ready?'':' - coming soon')).nodeVal(n=>(n.weightage||3)*2)
+ .nodeColor(n=>n.dim?'#2a2a3a':col(n)).nodeOpacity(.95).linkColor(()=>'#6b6b9a').linkOpacity(.5)
+ .onNodeClick(n=>{if(n.ready)location.href=n.file});
+function render(){
+ const m=c=>(!cls||c.cls==cls)&&c.title.toLowerCase().includes(q);
+ nodes.forEach(n=>n.dim=!m(n));G.nodeColor(G.nodeColor());
+ document.getElementById('grid').innerHTML=C.filter(m).map(c=>`<a class="card ${c.ready?'':'soon'}" href="${c.ready?c.file:'#'}"><div class="tag">Class ${c.cls}${c.ready?'':' | coming soon'}</div><b>${c.title}</b><div class="tag">Weightage: ${c.weightage}/10</div></a>`).join('');
+}
+document.getElementById('q').oninput=e=>{q=e.target.value.toLowerCase();render()};
+document.querySelectorAll('button[data-c]').forEach(b=>b.onclick=()=>{cls=+b.dataset.c;document.querySelectorAll('button[data-c]').forEach(x=>x.classList.toggle('on',x===b));render()});
+render();
+</script></body></html>
