@@ -10,7 +10,7 @@ window.CHAPTERS = [
  {id:"Purification", title:"Purification & Analysis", cls:11, weightage:5, file:"chapter/class11/Purification.html", links:["GOC"], ready:false},
  {id:"Haloalkanes", title:"Haloalkanes & Haloarenes", cls:12, weightage:8, file:"chapter/class12/Haloalkanes.html", links:["GOC","Isomerism","Hydrocarbons","Phenols","Amines","Carbonyls"], ready:true},
  {id:"Phenols", title:"Alcohols, Phenols & Ethers", cls:12, weightage:8, file:"chapter/class12/Alcohols_Phenols_Ethers.html", links:["Haloalkanes","Carbonyls","Aromatic","Acids"], ready:false},
- {id:"Carbonyls", title:"Aldehydes & Ketones", cls:12, weightage:9, file:"chapter/class12/Carbonyls.html", links:["Phenols","Acids","Amines","Haloalkanes"], ready:false},
+ {id:"Carbonyls", title:"Aldehydes & Ketones", cls:12, weightage:9, file:"chapter/class12/Carbonyls.html", links:["Phenols","Acids","Amines","Haloalkanes"], ready:true},
  {id:"Acids", title:"Carboxylic Acids & Derivatives", cls:12, weightage:7, file:"chapter/class12/Carboxylic_Acids.html", links:["Carbonyls","Phenols","Amines"], ready:false},
  {id:"Amines", title:"Amines & Diazonium Salts", cls:12, weightage:8, file:"chapter/class12/Amines.html", links:["Haloalkanes","Acids","Aromatic","Carbonyls"], ready:false},
  {id:"Biomolecules", title:"Biomolecules", cls:12, weightage:6, file:"chapter/class12/Biomolecules.html", links:["Isomerism","Carbonyls","Amines"], ready:false},
