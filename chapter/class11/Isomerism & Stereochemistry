@@ -1,0 +1,295 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Isomerism &amp; Stereochemistry - OrgChemMap</title><link rel="icon" href="../../assets/favicon.svg">
+<style>
+:root{--bg:#020212;--fg:#e8e8f5;--mut:#8b8ba8;--card:#0d0d24;--line:#26264a;--ac:#f0a04b}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif}
+main{max-width:860px;margin:auto;padding:20px 5vw 60px}a{color:var(--ac)}h2{margin-top:32px;border-bottom:1px solid var(--line);padding-bottom:4px}
+table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:var(--card)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}summary{cursor:pointer}
+.bars{display:flex;gap:8px;align-items:flex-end;height:120px}.bars div{flex:1;background:var(--ac);border-radius:4px 4px 0 0;position:relative;min-height:2px}
+.bars span{position:absolute;bottom:-34px;left:0;right:0;text-align:center;font-size:.75rem;color:var(--mut)}
+</style></head><body><main>
+<a href="../../index.html">&larr; Back to map</a>
+<h1>Isomerism &amp; Stereochemistry</h1><p style="color:var(--mut)">Class 11 | JEE Advanced</p>
+
+<h2>1. Chapter summary</h2>
+<p>Isomers share a molecular formula but differ in structure. <b>Constitutional (structural) isomers</b> differ in atom connectivity: chain, position, functional, metamerism, ring-chain and tautomerism. <b>Stereoisomers</b> have the same connectivity but differ in spatial arrangement. They are either <b>configurational</b> (geometrical and optical, interconverted only by breaking bonds) or <b>conformational</b> (interconverted by rotation about &sigma; bonds, in dynamic equilibrium).</p>
+<p>Symmetry elements (&sigma;, <i>i</i>, S<sub>n</sub>) decide whether a molecule is chiral, and the counting formulas depend on whether the molecule is symmetrical. The stereochemical outcome of a reaction (syn/anti addition, inversion/retention, anti-periplanar E2) is decided by its mechanism.</p>
+
+<h2>2. Structural isomerism &amp; tautomerism</h2>
+<table>
+<tr><th>Type</th><th>Meaning</th><th>Examples</th></tr>
+<tr><td>Chain</td><td>Different carbon skeleton</td><td>Butane / 2-methylpropane (C<sub>4</sub>H<sub>10</sub>)</td></tr>
+<tr><td>Position</td><td>Same skeleton and same functional group, different position</td><td>But-1-ene / but-2-ene; propan-1-ol / propan-2-ol</td></tr>
+<tr><td>Functional</td><td>Different functional groups</td><td>Ethanol / methoxymethane (C<sub>2</sub>H<sub>6</sub>O); propanal / propanone (C<sub>3</sub>H<sub>6</sub>O); acetic acid / methyl formate (C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>)</td></tr>
+<tr><td>Metamerism</td><td>Different alkyl groups on the two sides of the same polyvalent functional group (&minus;O&minus;, &minus;CO&minus;, &minus;S&minus;, &minus;NH&minus;, &minus;COO&minus;)</td><td>Diethyl ether / methyl propyl ether; pentan-2-one / pentan-3-one</td></tr>
+<tr><td>Ring-chain</td><td>Open-chain vs cyclic form of the same formula</td><td>Propene / cyclopropane (C<sub>3</sub>H<sub>6</sub>)</td></tr>
+<tr><td>Tautomerism</td><td>Constitutional isomers in rapid equilibrium that differ in the position of a H atom and a &pi; bond</td><td>Keto&harr;enol, nitro&harr;aci-nitro (below)</td></tr>
+</table>
+<h3>Degree of unsaturation (DBE)</h3>
+<p>DBE = C &minus; (H + X)/2 + N/2 + 1 (O and S are ignored). DBE = (number of rings) + (number of &pi; bonds), and a triple bond counts as 2. Isomers must have the same DBE, but it does not tell you which of ring or &pi; bond is present.</p>
+<table>
+<tr><th>Formula</th><th>DBE</th><th>What it allows</th></tr>
+<tr><td>C<sub>4</sub>H<sub>8</sub></td><td>1</td><td>Butenes and cycloalkanes: 5 structural isomers (6 including cis/trans)</td></tr>
+<tr><td>C<sub>5</sub>H<sub>8</sub></td><td>2</td><td>Alkynes, dienes, cycloalkenes, bicyclics</td></tr>
+<tr><td>C<sub>6</sub>H<sub>6</sub></td><td>4</td><td>Benzene (3 &pi; + 1 ring) and many open-chain poly-ynes/enynes</td></tr>
+<tr><td>C<sub>3</sub>H<sub>6</sub>O</td><td>1</td><td>Propanal, propanone, prop-2-en-1-ol, methyl vinyl ether, cyclopropanol, oxetane</td></tr>
+</table>
+<p>Alkane isomer counts: C<sub>4</sub>H<sub>10</sub> = 2, C<sub>5</sub>H<sub>12</sub> = 3, C<sub>6</sub>H<sub>14</sub> = 5.</p>
+
+<h3>Keto-enol tautomerism</h3>
+<p>Requires at least one &alpha;-H. HCHO, PhCHO and (CH<sub>3</sub>)<sub>3</sub>C&minus;CO&minus;C(CH<sub>3</sub>)<sub>3</sub> have none, so they cannot enolise. Tautomers are different compounds in equilibrium, unlike resonance structures, which are only different drawings of one species. For simple carbonyls the keto form wins, because C=O + C&minus;H is more stable than C=C + O&minus;H.</p>
+<table>
+<tr><th>Catalyst</th><th>Mechanism</th></tr>
+<tr><td>Acid</td><td>(1) The carbonyl O is protonated to give a resonance-stabilised hydroxy-carbocation. (2) A base (H<sub>2</sub>O) removes the &alpha;-H, forming the C=C and giving the enol.</td></tr>
+<tr><td>Base</td><td>(1) The base removes the &alpha;-H, giving a resonance-stabilised enolate (negative charge on O and C). (2) Protonation on <b>O</b> gives the enol; protonation on <b>C</b> returns the keto form.</td></tr>
+</table>
+<table>
+<tr><th>Factor raising % enol</th><th>Why</th><th>Example</th></tr>
+<tr><td>Aromaticity of the enol</td><td>Aromatic stabilisation outweighs the C=O advantage</td><td>Phenol exists almost entirely as the enol (vs cyclohexa-2,4-dienone); phloroglucinol is largely enolic</td></tr>
+<tr><td>Conjugation</td><td>Enol C=C conjugates with another C=O, C=C or Ph</td><td>Acetylacetone; benzoylacetone (PhCOCH<sub>2</sub>COCH<sub>3</sub>)</td></tr>
+<tr><td>Intramolecular H-bonding</td><td>cis-Enol forms a six-membered chelate ring (O&minus;H&middot;&middot;&middot;O=C)</td><td>1,3-diketones, &beta;-keto esters, salicylaldehyde-type systems</td></tr>
+<tr><td>Acidity of the &alpha;-H</td><td>Two electron-withdrawing groups make the &alpha;-H more acidic and easier to remove</td><td>1,3-diketone &gt; &beta;-keto ester &gt; malonic ester &gt; simple ketone</td></tr>
+<tr><td>Solvent</td><td>Non-polar solvents leave the chelate intact, so % enol is high. Polar protic solvents (water) H-bond to the C=O and compete with the chelate, so % enol falls.</td><td>Acetylacetone: much more enol in hexane than in water</td></tr>
+<tr><td>Bredt's rule</td><td>A bridgehead C=C in a small bicyclic ring cannot form</td><td>Bridgehead &alpha;-H of a bicyclic ketone does not enolise towards the bridgehead</td></tr>
+</table>
+<table>
+<tr><th>Compound</th><th>Approx. % enol</th></tr>
+<tr><td>Acetone</td><td>Negligible (about 10<sup>&minus;4</sup> %)</td></tr>
+<tr><td>Diethyl malonate</td><td>Very small (well below 1%)</td></tr>
+<tr><td>Ethyl acetoacetate</td><td>About 8% (neat)</td></tr>
+<tr><td>Acetylacetone (pentane-2,4-dione)</td><td>About 80% (neat)</td></tr>
+<tr><td>Phenol</td><td>About 100%</td></tr>
+</table>
+<div class="box">CHECK: the % enol values above are approximate and vary with temperature, solvent and source. Confirm the numbers and the order malonic ester vs simple ketone in your book before quoting them.</div>
+<h3>Other tautomeric pairs</h3>
+<table>
+<tr><th>Pair</th><th>Forms</th><th>Condition / note</th></tr>
+<tr><td>Nitro &harr; aci-nitro (nitronic acid)</td><td>R&minus;CH<sub>2</sub>&minus;NO<sub>2</sub> &harr; R&minus;CH=N(O)OH</td><td>Needs an &alpha;-H. The aci form is acidic, so primary and secondary nitroalkanes dissolve in alkali. Tertiary nitroalkanes do not.</td></tr>
+<tr><td>Nitroso &harr; oximino</td><td>R&minus;CH<sub>2</sub>&minus;N=O &harr; R&minus;CH=N&minus;OH</td><td>The oxime form is far more stable, so primary and secondary nitroso compounds exist as oximes.</td></tr>
+<tr><td>Imine &harr; enamine</td><td>R&minus;CH<sub>2</sub>&minus;CH=NR&prime; &harr; R&minus;CH=CH&minus;NHR&prime;</td><td>The nitrogen analogue of keto-enol tautomerism.</td></tr>
+<tr><td>Lactam &harr; lactim (amide &harr; imidic acid)</td><td>&minus;CO&minus;NH&minus; &harr; &minus;C(OH)=N&minus;</td><td>The amide form usually dominates.</td></tr>
+</table>
+
+<h2>3. Conformational analysis</h2>
+<p><b>Conformations</b> are arrangements related by rotation about single bonds. <b>Dihedral (torsional) angle</b> is the angle between two bonds on adjacent atoms viewed down the central bond. <b>Torsional strain</b> is repulsion between eclipsed bond pairs. <b>Steric strain</b> is van der Waals repulsion between bulky groups held close together.</p>
+<table>
+<tr><th>Projection</th><th>How it is drawn</th><th>Useful for / rules</th></tr>
+<tr><td>Sawhorse</td><td>The C&minus;C bond is drawn as an oblique line viewed slightly from above and the side, with three bonds on each carbon.</td><td>Shows staggered or eclipsed arrangements in perspective.</td></tr>
+<tr><td>Newman</td><td>Viewed along the C&minus;C bond. The front carbon is the point where three bonds meet, and the back carbon is the circle.</td><td>Dihedral angles are read directly. Staggered = 60&deg; between front and back bonds, eclipsed = 0&deg;.</td></tr>
+<tr><td>Fischer</td><td>Vertical bonds point away from the viewer, horizontal bonds point towards the viewer. It represents an eclipsed conformation.</td><td>Swapping two groups gives the enantiomer. Rotating 180&deg; in the plane keeps the configuration. Rotating 90&deg; inverts it. For R/S, if the lowest-priority group is on a horizontal bond, reverse the apparent sense.</td></tr>
+<tr><td>Wedge-dash</td><td>A solid wedge points towards the viewer and a dashed bond points away, usually on a zig-zag chain.</td><td>Shows configuration. Converting to Fischer needs the eclipsed conformation.</td></tr>
+</table>
+<table>
+<tr><th>Molecule</th><th>Conformer (dihedral)</th><th>Relative energy (approx.)</th><th>Origin of strain</th></tr>
+<tr><td>Ethane</td><td>Staggered (60&deg;)<br>Eclipsed (0&deg;)</td><td>0<br>about 12 kJ/mol (2.9 kcal)</td><td>Torsional only (three H/H eclipsing pairs, about 4 kJ/mol each)</td></tr>
+<tr><td>Propane</td><td>Staggered<br>Eclipsed</td><td>0<br>about 14 kJ/mol (3.3 kcal)</td><td>Torsional (two H/H pairs + one CH<sub>3</sub>/H pair of about 6 kJ/mol)</td></tr>
+<tr><td rowspan="4">n-Butane (C2&minus;C3 bond)</td><td>Anti (CH<sub>3</sub>/CH<sub>3</sub> at 180&deg;)</td><td>0 (most stable)</td><td>None</td></tr>
+<tr><td>Gauche (60&deg;)</td><td>about 3.8 kJ/mol (0.9 kcal)</td><td>Steric (van der Waals) between the CH<sub>3</sub> groups</td></tr>
+<tr><td>Partially eclipsed (120&deg;; CH<sub>3</sub>/H and H/H)</td><td>about 16 kJ/mol (3.8 kcal)</td><td>Torsional + some steric</td></tr>
+<tr><td>Fully eclipsed (0&deg;; CH<sub>3</sub>/CH<sub>3</sub>)</td><td>about 19 to 25 kJ/mol (4.5 to 6 kcal)</td><td>Torsional + large steric (least stable)</td></tr>
+</table>
+<p>Stability of n-butane conformers: anti &gt; gauche &gt; partially eclipsed &gt; fully eclipsed. The curve below uses a simple cosine fit through the textbook energies and is only schematic.</p>
+<svg viewBox="0 0 420 215" width="100%" style="max-width:520px;display:block;margin:10px 0" role="img" aria-label="Schematic potential energy curve of n-butane versus dihedral angle">
+<line x1="40" y1="160" x2="395" y2="160" stroke="#8b8ba8"/><line x1="40" y1="20" x2="40" y2="160" stroke="#8b8ba8"/>
+<polyline id="bc" fill="none" stroke="#f0a04b" stroke-width="2"/>
+<g style="fill:var(--mut)" font-size="10" text-anchor="middle">
+<text x="40" y="174">0</text><text x="98" y="174">60</text><text x="157" y="174">120</text><text x="215" y="174">180</text><text x="273" y="174">240</text><text x="332" y="174">300</text><text x="390" y="174">360</text>
+<text x="215" y="204">Dihedral angle CH&#8323;&#8211;C&#8211;C&#8211;CH&#8323; (degrees)</text>
+<text x="98" y="143">gauche</text><text x="215" y="150">anti</text><text x="332" y="143">gauche</text>
+<text x="68" y="30">fully eclipsed</text><text x="362" y="30">fully eclipsed</text>
+<text x="157" y="62">eclipsed</text><text x="273" y="62">eclipsed</text>
+</g>
+<text x="12" y="95" style="fill:var(--mut)" font-size="10" transform="rotate(-90 12 95)" text-anchor="middle">Energy (kJ/mol)</text>
+</svg>
+<div class="box">CHECK: the fully eclipsed energy for n-butane is quoted as about 19 kJ/mol (4.5 kcal) in some books and about 25 kJ/mol (6 kcal) in others. Use your book's value.</div>
+
+<h3>Gauche effect</h3>
+<p>Some molecules prefer the gauche conformer even though it is more crowded. This is the <b>gauche effect</b>.</p>
+<table>
+<tr><th>Molecule</th><th>Preferred conformer</th><th>Reason</th></tr>
+<tr><td>Ethylene glycol (HOCH<sub>2</sub>CH<sub>2</sub>OH)</td><td>Gauche</td><td>Intramolecular O&minus;H&middot;&middot;&middot;O hydrogen bond (strong in gas phase and non-polar media; weaker in water)</td></tr>
+<tr><td>2-Fluoroethanol</td><td>Gauche</td><td>O&minus;H&middot;&middot;&middot;F interaction plus hyperconjugation</td></tr>
+<tr><td>1,2-Difluoroethane</td><td>Gauche</td><td>&sigma;(C&minus;H) &rarr; &sigma;*(C&minus;F) hyperconjugation is best in the gauche arrangement</td></tr>
+</table>
+
+<h3>Cyclohexane and substituted cyclohexanes</h3>
+<table>
+<tr><th>Conformer</th><th>Relative energy (approx.)</th><th>Note</th></tr>
+<tr><td>Chair</td><td>0</td><td>No angle strain (C&minus;C&minus;C about 111&deg;) and no torsional strain (all bonds staggered)</td></tr>
+<tr><td>Twist-boat</td><td>about 23 kJ/mol (5.5 kcal)</td><td>Relieves some flagpole and eclipsing strain of the boat</td></tr>
+<tr><td>Boat</td><td>about 29 kJ/mol (6.9 kcal)</td><td>Flagpole H/H repulsion + eclipsing of four C&minus;H bonds</td></tr>
+<tr><td>Half-chair</td><td>about 45 kJ/mol (10.8 kcal)</td><td>Transition-state region of the ring flip</td></tr>
+</table>
+<p>Stability order: chair &gt; twist-boat &gt; boat &gt; half-chair. Ring flip converts every axial bond to equatorial and vice versa. It never changes whether two substituents are cis or trans.</p>
+<p><b>Monosubstituted:</b> an axial substituent has two 1,3-diaxial interactions with the axial H atoms on the same face. Each interaction is equivalent to one gauche-butane interaction (about 3.8 kJ/mol). For CH<sub>3</sub> that gives about 7.5 kJ/mol (1.8 kcal) in favour of equatorial, about 95% equatorial at room temperature. A tert-butyl group is so bulky that the ring is effectively locked with it equatorial.</p>
+<table>
+<tr><th>Disubstituted ring</th><th>cis</th><th>trans</th></tr>
+<tr><td>1,2</td><td>axial,equatorial (both chairs)</td><td>equatorial,equatorial (more stable) or axial,axial</td></tr>
+<tr><td>1,3</td><td>equatorial,equatorial (more stable) or axial,axial</td><td>axial,equatorial</td></tr>
+<tr><td>1,4</td><td>axial,equatorial</td><td>equatorial,equatorial (more stable) or axial,axial</td></tr>
+</table>
+<p>Memory aid: trans-1,2, cis-1,3 and trans-1,4 can have both groups equatorial.</p>
+<div class="box">CHECK: confirm A-values (CH<sub>3</sub> about 7 kJ/mol, tert-butyl above 20 kJ/mol) and note the exceptions your book gives: trans-1,2-dihalocyclohexanes can prefer the diaxial chair, and cis-1,3-diols can prefer diaxial through intramolecular H-bonding in non-polar solvents.</div>
+
+<h2>4. Geometrical isomerism (GI)</h2>
+<p>GI needs <b>restricted rotation</b> plus <b>two different groups on each end</b> (a &ne; b on one atom, c &ne; d on the other).</p>
+<table>
+<tr><th>System</th><th>Condition</th><th>Example</th></tr>
+<tr><td>C=C</td><td>Different groups on each sp<sup>2</sup> carbon</td><td>But-2-ene (cis/trans)</td></tr>
+<tr><td>C=N (oximes, hydrazones, imines)</td><td>Different groups on C; the N lone pair acts as the "different group" on N</td><td>Benzaldoxime, acetophenone oxime (syn/anti)</td></tr>
+<tr><td>N=N</td><td>Each N carries a lone pair and one substituent</td><td>Azobenzene (cis/trans)</td></tr>
+<tr><td>Rings</td><td>Substituents on two different ring carbons, each with two different groups, so the ring blocks rotation</td><td>1,2-dimethylcyclopropane; 1,4-dimethylcyclohexane</td></tr>
+<tr><td>Cumulenes</td><td><b>Odd</b> number of C=C (3, 5, ...): the end groups are coplanar, so GI. <b>Even</b> number (2, 4, ...): end groups lie in perpendicular planes, so axial chirality instead.</td><td>CH<sub>3</sub>CH=C=C=CHCH<sub>3</sub> shows GI; CH<sub>3</sub>CH=C=CHCH<sub>3</sub> is optically active</td></tr>
+<tr><td>Spiranes</td><td>The two rings lie in perpendicular planes, so they behave like allenes (axial chirality), not like C=C</td><td>2,6-Disubstituted spiro[3.3]heptane is chiral</td></tr>
+</table>
+<h3>Nomenclature</h3>
+<table>
+<tr><th>System</th><th>Rule</th></tr>
+<tr><td>cis / trans</td><td>Used when the two ends carry the same (or a clearly comparable) group. cis = same side, trans = opposite sides.</td></tr>
+<tr><td>E / Z (CIP)</td><td>Rank the two groups on each carbon by CIP priority (atomic number at the first point of difference; multiple bonds are duplicated). Higher-priority groups on the <b>same</b> side = <b>Z</b> (zusammen); on opposite sides = <b>E</b> (entgegen). It works for every case, including tri- and tetra-substituted alkenes.</td></tr>
+<tr><td>syn / anti</td><td>Used for oximes and similar C=N compounds. In many Indian texts, for aldoximes syn = H and OH on the same side, anti = H and OH on opposite sides.</td></tr>
+</table>
+<div class="box">CHECK: syn/anti naming for oximes is not uniform. For R&minus;CH=N&minus;OH, "syn (H and OH same side)" corresponds to E in CIP terms, because R outranks H on carbon. Confirm the convention your book uses.</div>
+<h3>Properties of cis vs trans</h3>
+<table>
+<tr><th>Property</th><th>Usual trend</th><th>Reason / example</th></tr>
+<tr><td>Dipole moment</td><td>cis &gt; trans</td><td>Bond dipoles add in cis and cancel in trans. cis-1,2-Dichloroethene about 1.9 D, trans about 0 D.</td></tr>
+<tr><td>Boiling point</td><td>cis &gt; trans (usually)</td><td>Higher polarity gives stronger dipole-dipole forces. cis-1,2-Dichloroethene about 60 &deg;C, trans about 48 &deg;C.</td></tr>
+<tr><td>Melting point</td><td>trans &gt; cis (usually)</td><td>The more symmetric trans isomer packs better in the crystal. Fumaric acid about 287 &deg;C, maleic acid about 130 &deg;C.</td></tr>
+<tr><td>Stability</td><td>trans &gt; cis (usually)</td><td>cis has steric (van der Waals) strain between the same-side groups. cis has the higher heat of hydrogenation and heat of combustion.</td></tr>
+<tr><td>Solubility in water</td><td>cis (maleic) &gt; trans (fumaric)</td><td>Greater polarity of the cis isomer</td></tr>
+<tr><td>Acidity of the dicarboxylic acids</td><td>pK<sub>a1</sub>: maleic (about 1.9) &lt; fumaric (about 3.0). pK<sub>a2</sub>: maleic (about 6.1) &gt; fumaric (about 4.4).</td><td>The maleate monoanion is stabilised by an intramolecular H-bond, so the first ionisation is easier; the same H-bond makes the second proton hard to remove.</td></tr>
+</table>
+<div class="box">CHECK: exceptions to "cis is less stable / more polar". For some 1,2-dihaloethenes the cis isomer is the more stable (the "cis effect"). Verify any numerical melting/boiling points and pK<sub>a</sub> values against your book.</div>
+
+<h2>5. Optical isomerism &amp; stereochemical relationships</h2>
+<table>
+<tr><th>Symmetry element</th><th>Description</th><th>Effect on chirality</th></tr>
+<tr><td>Plane of symmetry (POS, &sigma;)</td><td>A plane dividing the molecule into two mirror-image halves (equivalent to S<sub>1</sub>)</td><td>Molecule is achiral</td></tr>
+<tr><td>Centre of symmetry (COS, <i>i</i>)</td><td>A point such that every atom has an identical atom directly opposite at equal distance (equivalent to S<sub>2</sub>)</td><td>Molecule is achiral</td></tr>
+<tr><td>Alternating axis (S<sub>n</sub>)</td><td>Rotate by 360&deg;/n, then reflect in the plane perpendicular to the axis; if the result is identical, S<sub>n</sub> is present</td><td>Molecule is achiral</td></tr>
+<tr><td>Simple axis (C<sub>n</sub>)</td><td>Rotation by 360&deg;/n gives an identical molecule</td><td>Does not decide chirality. Chiral molecules can have C<sub>2</sub> axes (e.g. trans-1,2-dimethylcyclopropane).</td></tr>
+</table>
+<p>A molecule is chiral if and only if it has no S<sub>n</sub> axis (no &sigma;, no <i>i</i>, no S<sub>4</sub> etc.). Dissymmetric = chiral with no S<sub>n</sub>.</p>
+<h3>CIP rules for R/S</h3>
+<ul>
+<li>Priority goes to the higher atomic number at the first point of difference. For isotopes, higher mass wins (D &gt; H).</li>
+<li>Multiple bonds are treated as duplicated atoms. Examples: &minus;COOH &gt; &minus;CHO &gt; &minus;CH<sub>2</sub>OH, and &minus;C&equiv;CH &gt; &minus;CH=CH<sub>2</sub> &gt; &minus;CH(CH<sub>3</sub>)<sub>2</sub> &gt; &minus;CH<sub>2</sub>CH<sub>3</sub>.</li>
+<li>Orient the lowest-priority group away from you. Priorities 1&rarr;2&rarr;3 clockwise = <b>R</b>, anticlockwise = <b>S</b>.</li>
+<li>R/S has no fixed relation to the sign of rotation, (+)/(&minus;), or to D/L.</li>
+</ul>
+<h3>Stereochemical relationships</h3>
+<table>
+<tr><th>Relationship</th><th>Definition</th><th>Properties</th></tr>
+<tr><td>Enantiomers</td><td>Non-superimposable mirror images; all stereocentres inverted</td><td>Identical m.p., b.p., solubility and spectra in achiral media. Equal and opposite rotation. React differently with chiral reagents.</td></tr>
+<tr><td>Diastereomers</td><td>Stereoisomers that are not mirror images (includes cis/trans isomers)</td><td>Different physical properties, so they can be separated by ordinary methods</td></tr>
+<tr><td>Epimers</td><td>Diastereomers that differ at exactly one stereocentre</td><td>E.g. D-glucose and D-mannose (C-2)</td></tr>
+<tr><td>Meso compound</td><td>Contains stereocentres but is achiral through an internal POS or COS</td><td>Optically inactive by <b>internal</b> compensation; cannot be resolved</td></tr>
+<tr><td>Racemic mixture</td><td>1:1 mixture of enantiomers</td><td>Optically inactive by <b>external</b> compensation; can be resolved</td></tr>
+</table>
+<p><b>Resolution of a racemate:</b> convert it into diastereomeric salts with a chiral resolving agent and separate by fractional crystallisation, use chiral chromatography, or use enzymes.</p>
+<p><b>Enantiomeric excess:</b> ee (%) = |R &minus; S| / (R + S) &times; 100. Optical purity = [&alpha;]<sub>observed</sub> / [&alpha;]<sub>pure</sub> &times; 100, which equals ee when rotation is proportional to composition. Percentage of the major enantiomer = 50 + ee/2. Example: a sample with 70% R and 30% S has ee = 40%.</p>
+<h3>Pseudoasymmetric centres</h3>
+<p>A centre bearing four different ligands, of which two are enantiomorphic (one R-type, one S-type). It is labelled with lower-case <b>r</b> or <b>s</b>. In the CIP rule for such cases the (R)-ligand ranks higher than the (S)-ligand. The molecule can be meso. Example: C-3 of pentane-2,3,4-triol.</p>
+<div class="box">CHECK: the full CIP tie-break sequence (like pairs RR/SS rank above unlike pairs RS, then R &gt; S) is longer than the shorthand above. Verify against the CIP statement your syllabus follows.</div>
+<h3>Chirality without a chiral carbon (axial chirality)</h3>
+<table>
+<tr><th>System</th><th>Condition</th><th>Example</th></tr>
+<tr><td>Ortho-substituted biphenyls (atropisomerism)</td><td>Rotation about the biaryl bond must be blocked by at least three bulky ortho groups (typically 2,2&prime;,6 or 2,2&prime;,6,6&prime;). Each ring must also have two different groups at its two ortho positions.</td><td>6,6&prime;-Dinitrobiphenyl-2,2&prime;-dicarboxylic acid</td></tr>
+<tr><td>Allenes</td><td>abC=C=Cab, with a &ne; b on each terminal carbon (even number of cumulative C=C)</td><td>Penta-2,3-diene</td></tr>
+<tr><td>Alkylidenecycloalkanes</td><td>Substituent at C-4 of a cyclohexylidene unit, with two different groups on the exocyclic carbon, behaves like an allene</td><td>(4-Methylcyclohexylidene)acetic acid</td></tr>
+<tr><td>Spiranes</td><td>Perpendicular rings with suitable substituents</td><td>2,6-Disubstituted spiro[3.3]heptane</td></tr>
+</table>
+<p>Other chiral centres: quaternary N (four different groups), P in phosphines, S in sulfoxides. Simple amines with three different groups invert too fast at room temperature to be resolved.</p>
+
+<h2>6. Counting stereoisomers &amp; stereochemistry in reactions</h2>
+<h3>Molecules with n stereocentres</h3>
+<table>
+<tr><th>Type of molecule</th><th>Total stereoisomers</th><th>Enantiomeric pairs</th><th>Meso forms</th></tr>
+<tr><td>Unsymmetrical</td><td>2<sup>n</sup></td><td>2<sup>n&minus;1</sup></td><td>0</td></tr>
+<tr><td>Symmetrical, n even</td><td>2<sup>n&minus;1</sup> + 2<sup>n/2&minus;1</sup></td><td>2<sup>n&minus;2</sup></td><td>2<sup>n/2&minus;1</sup></td></tr>
+<tr><td>Symmetrical, n odd (middle centre pseudoasymmetric)</td><td>2<sup>n&minus;1</sup></td><td>2<sup>n&minus;2</sup> &minus; 2<sup>(n&minus;3)/2</sup></td><td>2<sup>(n&minus;1)/2</sup></td></tr>
+</table>
+<p>Check: tartaric acid (n = 2, symmetrical) gives 3 (a pair + 1 meso). Pentane-2,3,4-triol (n = 3, symmetrical) gives 4 (a pair + 2 meso).</p>
+<h3>Geometrical isomers of polyenes R&minus;(CH=CH)<sub>n</sub>&minus;R&prime;</h3>
+<table>
+<tr><th>Ends</th><th>Number of GI</th></tr>
+<tr><td>Unsymmetrical</td><td>2<sup>n</sup></td></tr>
+<tr><td>Symmetrical, n even</td><td>2<sup>n&minus;1</sup> + 2<sup>n/2&minus;1</sup></td></tr>
+<tr><td>Symmetrical, n odd</td><td>2<sup>n&minus;1</sup> + 2<sup>(n&minus;1)/2</sup></td></tr>
+</table>
+<p>Examples: hexa-2,4-diene (symmetrical, n = 2) has 3; octa-2,4,6-triene (symmetrical, n = 3) has 6.</p>
+<h3>Cyclic compounds (count by drawing)</h3>
+<table>
+<tr><th>Compound</th><th>Stereoisomers</th></tr>
+<tr><td>1,2-Dimethylcyclopropane</td><td>3 (cis meso + trans pair)</td></tr>
+<tr><td>1,2-Dimethylcyclohexane / 1,3-dimethylcyclohexane</td><td>3 each (cis achiral, trans a pair)</td></tr>
+<tr><td>1,4-Dimethylcyclohexane / 1,3-dimethylcyclobutane</td><td>2 each (cis and trans, both achiral)</td></tr>
+<tr><td>1-Bromo-2-chlorocyclopropane</td><td>4 (cis pair + trans pair)</td></tr>
+</table>
+<h3>Stereospecific vs stereoselective</h3>
+<p><b>Stereospecific:</b> different stereoisomeric reactants give different stereoisomeric products, and the mechanism fixes the outcome. <b>Stereoselective:</b> one stereoisomer is preferred over another regardless of the reactant's stereochemistry. All stereospecific reactions are stereoselective; the reverse is not true. Example: dehydrohalogenation of 2-bromobutane favouring trans-but-2-ene is stereoselective but not stereospecific.</p>
+<table>
+<tr><th>Reaction (course)</th><th>cis-but-2-ene gives</th><th>trans-but-2-ene gives</th></tr>
+<tr><td>Br<sub>2</sub> / CCl<sub>4</sub> (anti addition)</td><td>Racemic (2R,3R) + (2S,3S)-2,3-dibromobutane</td><td>meso-2,3-Dibromobutane</td></tr>
+<tr><td>Cold dilute alkaline KMnO<sub>4</sub> or OsO<sub>4</sub> (syn dihydroxylation)</td><td>meso-Butane-2,3-diol</td><td>Racemic butane-2,3-diol</td></tr>
+<tr><td>Peracid, then H<sub>3</sub>O<sup>+</sup> (syn epoxidation, anti ring opening: net anti)</td><td>Racemic butane-2,3-diol</td><td>meso-Butane-2,3-diol</td></tr>
+<tr><td>Singlet carbene or Simmons-Smith (syn addition)</td><td>cis-1,2-Dimethylcyclopropane</td><td>trans-1,2-Dimethylcyclopropane</td></tr>
+</table>
+<p>Cyclohexene + Br<sub>2</sub> gives only trans-1,2-dibromocyclohexane (as a racemate).</p>
+<table>
+<tr><th>Substitution / elimination</th><th>Stereochemical course</th></tr>
+<tr><td>S<sub>N</sub>2</td><td>Inversion of configuration (Walden inversion)</td></tr>
+<tr><td>S<sub>N</sub>1</td><td>Racemisation, often with slight excess inversion because of ion-pair effects</td></tr>
+<tr><td>S<sub>N</sub>i (ROH + SOCl<sub>2</sub>, no base)</td><td>Retention. With pyridine present, inversion (S<sub>N</sub>2).</td></tr>
+<tr><td>Neighbouring-group participation</td><td>Net retention through two successive inversions</td></tr>
+<tr><td>E2</td><td>Anti-periplanar H and leaving group, so stereospecific. In cyclohexanes both must be axial. Menthyl chloride (Cl equatorial in its stable chair) gives only 2-menthene; neomenthyl chloride (Cl axial) gives mainly 3-menthene.</td></tr>
+<tr><td>Anti debromination (e.g. NaI)</td><td>meso-2,3-Dibromobutane &rarr; trans-but-2-ene; racemic 2,3-dibromobutane &rarr; cis-but-2-ene</td></tr>
+<tr><td>E1</td><td>Not stereospecific; gives the more stable (Zaitsev, trans) alkene</td></tr>
+</table>
+
+<h2>7. Common traps and exceptions</h2>
+<div class="box"><b>trans-Cyclooctene is chiral.</b> The twisted eight-membered ring gives a stable chirality (planar/axial) with no chiral carbon, and the enantiomers do not interconvert at room temperature. CHECK: whether your book calls this planar or axial chirality.</div>
+<div class="box"><b>Gauche can beat anti.</b> In 2-fluoroethanol, ethylene glycol and 1,2-difluoroethane the gauche conformer is more stable (H-bond and hyperconjugation). Do not assume anti is always lowest in energy.</div>
+<div class="box"><b>Pseudoasymmetric centre:</b> the (R)-ligand outranks the (S)-ligand, and the centre is labelled r/s. Pentane-2,3,4-triol has two meso forms that differ only at C-3, and they are diastereomers, not enantiomers.</div>
+<div class="box"><b>Cumulenes flip the rule:</b> even number of C=C (allene) gives optical isomerism; odd number (butatriene) gives geometrical isomerism.</div>
+<div class="box"><b>Biphenyls need bulky ortho groups.</b> Small groups (F, H, OH) allow rotation, so 2,2&prime;-difluorobiphenyl is not resolvable. If either ring has identical groups at both ortho positions, the molecule has a mirror plane and is achiral. For example, 2,2&prime;,6,6&prime;-tetranitrobiphenyl is achiral.</div>
+<div class="box"><b>Do not mix up labels:</b> chiral centres do not guarantee a chiral molecule (meso). Racemic is not meso. R/S has no fixed relation to (+)/(&minus;). Optical activity belongs to the whole molecule, not to a single centre.</div>
+
+<h2>8. Practice questions</h2>
+<details><summary>Q1 (conceptual). Calculate the DBE of C<sub>4</sub>H<sub>8</sub> and state how many structural isomers it has, and how many in total if cis/trans isomers are counted.</summary>
+<p>DBE = 4 &minus; 8/2 + 1 = 1 (one ring or one C=C). Structural isomers: but-1-ene, but-2-ene, 2-methylpropene, cyclobutane, methylcyclopropane = <b>5</b>. But-2-ene has cis and trans forms, so the total is <b>6</b>.</p></details>
+<details><summary>Q2 (conceptual, multiple correct). Which can show optical activity? (A) CH<sub>3</sub>CH=C=CHCH<sub>3</sub> (B) CH<sub>3</sub>CH=C=C=CHCH<sub>3</sub> (C) CH<sub>3</sub>CH=C=C(CH<sub>3</sub>)<sub>2</sub> (D) (4-methylcyclohexylidene)acetic acid</summary>
+<p><b>Answer: A and D.</b> (A) is an allene with H and CH<sub>3</sub> on each end: chiral. (B) has three cumulative double bonds, so it shows GI, not optical activity. (C) has two identical CH<sub>3</sub> on one terminal carbon, so it is achiral. (D) shows axial chirality like an allene.</p></details>
+<details><summary>Q3 (conceptual). meso-Tartaric acid has two chiral centres but is optically inactive. Explain, and say whether it can be resolved.</summary>
+<p>It is (2R,3S). In the eclipsed conformation it has a plane of symmetry (in the staggered anti conformation, a centre of symmetry), so the molecule is achiral. The rotations of the two halves cancel internally (internal compensation). It is a single achiral compound, so it <b>cannot</b> be resolved, unlike racemic (&plusmn;)-tartaric acid.</p></details>
+<details><summary>Q4 (conceptual). Why does acetylacetone contain far more enol than acetone, and why does the enol content drop in water?</summary>
+<p>The acetylacetone enol is stabilised by conjugation of C=C with the second C=O and by a six-membered intramolecular H-bonded chelate ring. Its &alpha;-H, flanked by two C=O groups, is also more acidic and easier to remove. Acetone has none of these. In water, solvent molecules H-bond to the C=O and the enol OH, competing with the chelate, so the keto form is favoured. In non-polar solvents the chelate persists and the enol content is high.</p></details>
+<details><summary>Q5 (counting). How many stereoisomers does pentane-2,3,4-triol have? Classify them.</summary>
+<p><b>4.</b> C-2 and C-4 are stereocentres; C-3 is stereogenic only when C-2 and C-4 have opposite configurations (pseudoasymmetric). (2R,4R) and (2S,4S) are an enantiomeric pair (C-3 is not a stereocentre in them). (2R,3r,4S) and (2R,3s,4S) are two meso diastereomers. Formula for symmetrical n = 3: 2<sup>2</sup> = 4 total, 2 meso, 1 pair.</p></details>
+<details><summary>Q6 (counting). How many geometrical isomers does CH<sub>3</sub>&minus;CH=CH&minus;CH=CH&minus;CH=CH&minus;CH<sub>3</sub> (octa-2,4,6-triene) have?</summary>
+<p><b>6.</b> Symmetrical polyene with n = 3 (odd): 2<sup>2</sup> + 2<sup>1</sup> = 6. Explicitly: EEE, ZZZ, EEZ (= ZEE), EZE, ZEZ, ZZE (= EZZ).</p></details>
+<details><summary>Q7 (order). Arrange the n-butane conformers in decreasing stability: fully eclipsed, gauche, anti, partially eclipsed. Give the CH<sub>3</sub>/CH<sub>3</sub> dihedral angle of each.</summary>
+<p><b>Anti (180&deg;) &gt; gauche (60&deg;) &gt; partially eclipsed (120&deg;) &gt; fully eclipsed (0&deg;).</b> Anti has no strain; gauche has steric strain only; partially eclipsed has torsional strain; fully eclipsed has torsional plus large steric strain from the CH<sub>3</sub>/CH<sub>3</sub> contact.</p></details>
+<details><summary>Q8 (tricky, multiple correct). Which are correct? (A) cis-1,2-Dimethylcyclohexane has one axial and one equatorial CH<sub>3</sub> in each chair. (B) The more stable chair of trans-1,4-dimethylcyclohexane has both CH<sub>3</sub> equatorial. (C) cis-1,3-Dimethylcyclohexane is more stable than trans-1,3-dimethylcyclohexane. (D) trans-1,4-Dimethylcyclohexane is chiral.</summary>
+<p><b>Answer: A, B, C.</b> (A) cis-1,2 is axial,equatorial in both chairs. (B) trans-1,4 can be equatorial,equatorial. (C) cis-1,3 can be equatorial,equatorial while trans-1,3 always has one axial CH<sub>3</sub> (about 7.5 kJ/mol less stable). (D) is false: trans-1,4 has a plane of symmetry and is achiral.</p></details>
+<details><summary>Q9 (tricky, multi-step). cis- and trans-But-2-ene are each treated separately with (i) Br<sub>2</sub>/CCl<sub>4</sub> and (ii) cold dilute alkaline KMnO<sub>4</sub>. Name the stereochemical form of each of the four products, and say how many of the isolated products are optically active.</summary>
+<p>(i) Br<sub>2</sub> adds anti: cis gives the <b>racemic</b> (2R,3R)/(2S,3S) dibromide; trans gives <b>meso</b>. (ii) KMnO<sub>4</sub> adds syn: cis gives <b>meso</b>-butane-2,3-diol; trans gives the <b>racemic</b> diol. Meso compounds are inactive by internal compensation and racemates by external compensation, so <b>none</b> of the four isolated products is optically active.</p></details>
+<details><summary>Q10 (tricky). How many stereoisomers does CH<sub>3</sub>&minus;CH=CH&minus;CH(OH)&minus;CH=CH&minus;CH<sub>3</sub> (hepta-2,5-dien-4-ol) have?</summary>
+<p><b>4.</b> Each double bond can be E or Z. (E,E) and (Z,Z): the two arms on C-4 are identical, so C-4 is not a stereocentre and each is a single achiral compound (2 isomers). (E,Z): the two arms differ, so C-4 becomes a stereocentre and gives an enantiomeric pair (2 isomers). Total = 2 + 2 = 4.</p></details>
+
+<h2>9. Related chapters</h2>
+<p><a href="GOC.html">General Organic Chemistry</a>, <a href="Hydrocarbons.html">Hydrocarbons</a>, <a href="../class12/Haloalkanes.html">Haloalkanes &amp; Haloarenes</a></p>
+
+<h2>JEE Advanced trend (from your books)</h2>
+<p style="color:var(--mut)">Edit the STATS object at the bottom of this file with questions-per-year from your books. Nothing shows until you do.</p><div class="bars" id="bars"></div><div style="height:44px"></div>
+</main>
+<script>
+// REPLACE with real numbers from the book, e.g. {2019:2, 2020:1}. Left empty on purpose.
+const STATS={};
+const k=Object.keys(STATS);if(k.length){const m=Math.max(...k.map(y=>STATS[y]),1);
+document.getElementById('bars').innerHTML=k.map(y=>`<div style="height:${STATS[y]/m*100}%"><span>${y}<br>${STATS[y]}</span></div>`).join('')}
+(function(){var c=[9.7667,2.2667,-0.2667,7.2333],p=[];for(var a=0;a<=360;a+=5){var r=a*Math.PI/180,e=c[0]+c[1]*Math.cos(r)+c[2]*Math.cos(2*r)+c[3]*Math.cos(3*r);p.push((40+a/360*350).toFixed(1)+','+(160-e*130/19).toFixed(1))}var el=document.getElementById('bc');if(el)el.setAttribute('points',p.join(' '))})();
+</script></body></html>
