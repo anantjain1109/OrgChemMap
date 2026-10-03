@@ -15,5 +15,5 @@ window.CHAPTERS = [
  {id:"Amines", title:"Amines & Diazonium Salts", cls:12, weightage:8, file:"chapter/class12/Amines.html", links:["Haloalkanes","Acids","Aromatic","Carbonyls"], ready:false},
  {id:"Biomolecules", title:"Biomolecules", cls:12, weightage:6, file:"chapter/class12/Biomolecules.html", links:["Isomerism","Carbonyls","Amines"], ready:true},
  {id:"Polymers", title:"Polymers", cls:12, weightage:4, file:"chapter/class12/Polymers.html", links:["Hydrocarbons","Acids","Amines"], ready:true},
- {id:"Everyday", title:"Chemistry in Everyday Life", cls:12, weightage:3, file:"chapter/class12/Everyday.html", links:["Biomolecules","Phenols"], ready:false}
+ {id:"Everyday", title:"Chemistry in Everyday Life", cls:12, weightage:3, file:"chapter/class12/Everyday.html", links:["Biomolecules","Phenols"], ready:true}
 ];
