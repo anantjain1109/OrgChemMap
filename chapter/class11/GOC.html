@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>General Organic Chemistry - OrgChemMap</title><link rel="icon" href="../../assets/favicon.svg">
+<style>
+:root{--bg:#020212;--fg:#e8e8f5;--mut:#8b8ba8;--card:#0d0d24;--line:#26264a;--ac:#f0a04b}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,sans-serif}
+main{max-width:860px;margin:auto;padding:20px 5vw 60px}a{color:var(--ac)}h2{margin-top:32px;border-bottom:1px solid var(--line);padding-bottom:4px}
+table{width:100%;border-collapse:collapse;display:block;overflow-x:auto}td,th{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:var(--card)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:8px 0}summary{cursor:pointer}
+.bars{display:flex;gap:8px;align-items:flex-end;height:120px}.bars div{flex:1;background:var(--ac);border-radius:4px 4px 0 0;position:relative;min-height:2px}
+.bars span{position:absolute;bottom:-34px;left:0;right:0;text-align:center;font-size:.75rem;color:var(--mut)}
+</style></head><body><main>
+<a href="../../index.html">&larr; Back to map</a>
+<h1>General Organic Chemistry (GOC)</h1><p style="color:var(--mut)">Class 11 | JEE Advanced</p>
+
+<h2>1. Chapter summary</h2>
+<p>GOC explains <b>where electrons sit and how they move</b> in organic molecules. Electronic effects (inductive, resonance, hyperconjugation, electromeric) decide the stability of molecules and intermediates. Stability of carbocations, carbanions, free radicals and carbenes decides the reaction path. The same effects fix acidity and basicity orders. Nomenclature and hybridisation give the structural language for the rest of organic chemistry.</p>
+
+<h2>2. Electronic effects</h2>
+<table>
+<tr><th>Effect</th><th>Nature</th><th>Key points</th></tr>
+<tr><td>Inductive (I)</td><td>Permanent, through &sigma; bonds</td><td>Falls rapidly with distance (negligible after about 3 carbons). Depends on electronegativity and on s-character of the attached carbon (sp &gt; sp<sup>2</sup> &gt; sp<sup>3</sup> in electron withdrawal).</td></tr>
+<tr><td>Resonance / mesomeric (R, M)</td><td>Permanent, through &pi; bonds / lone pairs</td><td>Needs conjugation and a planar arrangement. Resonance structures differ only in electron positions, never atom positions. More equivalent structures give more stabilisation.</td></tr>
+<tr><td>Hyperconjugation</td><td>Permanent, &sigma;(C-H) with adjacent empty p or &pi; orbital</td><td>"No-bond resonance". Number of hyperconjugative structures = number of &alpha;-H. Stabilises alkenes, carbocations and radicals.</td></tr>
+<tr><td>Electromeric (E)</td><td>Temporary, only in presence of an attacking reagent</td><td>Complete transfer of the &pi; pair to one atom of a multiple bond. +E: transfer towards the attacked atom's side (e.g. with H<sup>+</sup>); &minus;E: transfer away from the attacking reagent.</td></tr>
+</table>
+<h3>Inductive orders</h3>
+<table>
+<tr><th>Type</th><th>Order</th></tr>
+<tr><td>&minus;I (decreasing)</td><td>&minus;NH<sub>3</sub><sup>+</sup> &gt; &minus;NO<sub>2</sub> &gt; &minus;CN &gt; &minus;SO<sub>3</sub>H &gt; &minus;CHO &gt; &minus;COOH &gt; &minus;F &gt; &minus;Cl &gt; &minus;Br &gt; &minus;I &gt; &minus;OH &gt; &minus;OR &gt; &minus;C<sub>6</sub>H<sub>5</sub> &gt; &minus;CH=CH<sub>2</sub> &gt; H</td></tr>
+<tr><td>+I (decreasing)</td><td>&minus;O<sup>&minus;</sup> &gt; &minus;COO<sup>&minus;</sup> &gt; (CH<sub>3</sub>)<sub>3</sub>C&minus; &gt; (CH<sub>3</sub>)<sub>2</sub>CH&minus; &gt; CH<sub>3</sub>CH<sub>2</sub>&minus; &gt; CH<sub>3</sub>&minus; &gt; H</td></tr>
+</table>
+<div class="box">CHECK: relative &minus;I positions of &minus;CN, &minus;SO<sub>3</sub>H and &minus;CHO differ between textbooks. Verify against your book's order before memorising.</div>
+<h3>Mesomeric groups</h3>
+<table>
+<tr><th>+M / +R (donate lone pair or &pi; electrons)</th><th>&minus;M / &minus;R (withdraw &pi; electrons)</th></tr>
+<tr><td>&minus;O<sup>&minus;</sup>, &minus;NH<sub>2</sub>, &minus;NHR, &minus;NR<sub>2</sub>, &minus;OH, &minus;OR, &minus;NHCOR, &minus;OCOR, &minus;F, &minus;Cl, &minus;Br, &minus;I, &minus;SH. Approximate +M order: &minus;NR<sub>2</sub> &gt; &minus;NH<sub>2</sub> &gt; &minus;OH &gt; &minus;OR &gt; &minus;NHCOR &gt; &minus;OCOR &gt; &minus;F.</td><td>&minus;NO<sub>2</sub>, &minus;CN, &minus;CHO, &minus;COR, &minus;COOH, &minus;COOR, &minus;CONH<sub>2</sub>, &minus;COCl, &minus;SO<sub>3</sub>H</td></tr>
+</table>
+<h3>When does each dominate?</h3>
+<table>
+<tr><th>Situation</th><th>Dominant effect</th></tr>
+<tr><td>Conjugation possible and planar</td><td>Resonance usually beats inductive effect (e.g. &minus;OCH<sub>3</sub> at para: +M &gt; &minus;I).</td></tr>
+<tr><td>Halogens on a benzene ring</td><td>&minus;I &gt; +M, so the ring is deactivated, yet the +M still directs ortho/para.</td></tr>
+<tr><td>Meta position</td><td>Only inductive effect operates (no resonance transmission to meta).</td></tr>
+<tr><td>Substituent far along a saturated chain</td><td>Inductive effect fades; hyperconjugation and resonance do not apply.</td></tr>
+<tr><td>Attacking reagent present on a C=C or C=O</td><td>Electromeric effect appears and overrides the static polarisation; it vanishes when the reagent leaves.</td></tr>
+<tr><td>Alkene/carbocation/radical stability by alkyl groups</td><td>Hyperconjugation (with +I helping).</td></tr>
+</table>
+<div class="box">CHECK: the Baker-Nathan effect (reversed alkyl order in some reaction rates, CH<sub>3</sub> &gt; C<sub>2</sub>H<sub>5</sub> &gt; iPr &gt; tBu) is often cited as evidence for hyperconjugation. Verify whether your syllabus expects it.</div>
+
+<h2>3. Reactive intermediates</h2>
+<table>
+<tr><th>Property</th><th>Carbocation</th><th>Carbanion</th><th>Free radical</th><th>Carbene</th></tr>
+<tr><td>Charge / electrons on C</td><td>+ve, 6 e<sup>&minus;</sup> (sextet)</td><td>&minus;ve, 8 e<sup>&minus;</sup> (one lone pair)</td><td>Neutral, 7 e<sup>&minus;</sup></td><td>Neutral, 6 e<sup>&minus;</sup>, divalent C</td></tr>
+<tr><td>Hybridisation</td><td>sp<sup>2</sup></td><td>sp<sup>3</sup> (sp<sup>2</sup> if delocalised, e.g. benzyl, enolate)</td><td>sp<sup>2</sup> (alkyl radicals may be slightly pyramidal)</td><td>Singlet: sp<sup>2</sup>. Triplet: sp (or nearly linear)</td></tr>
+<tr><td>Shape</td><td>Trigonal planar</td><td>Pyramidal</td><td>Planar / shallow pyramid</td><td>Singlet: bent. Triplet: linear or slightly bent</td></tr>
+<tr><td>Stability order</td><td>3&deg; &gt; 2&deg; &gt; 1&deg; &gt; CH<sub>3</sub><sup>+</sup>. Reason: hyperconjugation + (+I). Resonance (allyl, benzyl, p-OCH<sub>3</sub>-benzyl) stabilises strongly.</td><td>CH<sub>3</sub><sup>&minus;</sup> &gt; 1&deg; &gt; 2&deg; &gt; 3&deg;. Reason: +I destabilises a negative charge. Stabilised by &minus;I, &minus;M, resonance, higher s-character (sp &gt; sp<sup>2</sup> &gt; sp<sup>3</sup>) and aromaticity (cyclopentadienyl anion).</td><td>3&deg; &gt; 2&deg; &gt; 1&deg; &gt; CH<sub>3</sub>&bull;. Reason: hyperconjugation. Allyl, benzyl, and Ph<sub>3</sub>C&bull; are especially stable.</td><td>Triplet is the ground state for CH<sub>2</sub>. Substituents with lone pairs (halogens, N, O) stabilise the singlet.</td></tr>
+<tr><td>Common rearrangements</td><td>1,2-H shift, 1,2-CH<sub>3</sub> (alkyl) shift, ring expansion/contraction to a more stable cation</td><td>Rare</td><td>Rare (1,2-aryl shift in neophyl-type radicals)</td><td>Wolff rearrangement, 1,2-H shift to an alkene</td></tr>
+</table>
+<div class="box">CHECK: exact geometry of alkyl radicals (planar vs shallow pyramidal) and of triplet carbene (linear vs bent). Use your book's statement for exam answers.</div>
+
+<h2>4. Acidity and basicity orders</h2>
+<table>
+<tr><th>Class</th><th>Order</th><th>Reason</th></tr>
+<tr><td>Carboxylic acids (&minus;I groups)</td><td>HCOOH &gt; CH<sub>3</sub>COOH. Cl<sub>3</sub>CCOOH &gt; Cl<sub>2</sub>CHCOOH &gt; ClCH<sub>2</sub>COOH &gt; CH<sub>3</sub>COOH. FCH<sub>2</sub>COOH &gt; ClCH<sub>2</sub>COOH &gt; BrCH<sub>2</sub>COOH &gt; ICH<sub>2</sub>COOH.</td><td>&minus;I groups stabilise the carboxylate anion; more halogens and nearer halogens give a greater effect. Alkyl (+I) groups destabilise it. HCOOH has no +I alkyl group.</td></tr>
+<tr><td>Phenols</td><td>2,4,6-trinitrophenol &gt; 2,4-dinitrophenol &gt; p-nitrophenol &gt; o-nitrophenol (intramolecular H-bond) &gt; m-nitrophenol &gt; phenol &gt; p-cresol</td><td>Nitro group at o/p stabilises phenoxide by &minus;M and &minus;I. At meta only &minus;I works. Alkyl and OCH<sub>3</sub> (at para) raise electron density on O and decrease acidity.</td></tr>
+<tr><td>General acid ladder</td><td>RCOOH &gt; H<sub>2</sub>CO<sub>3</sub> &gt; phenol &gt; H<sub>2</sub>O &gt; ROH &gt; HC&equiv;CH &gt; NH<sub>3</sub> &gt; CH<sub>2</sub>=CH<sub>2</sub> &gt; CH<sub>3</sub>CH<sub>3</sub></td><td>Stability of the conjugate base: carboxylate and phenoxide are resonance stabilised, alkoxide is not.</td></tr>
+<tr><td>Alcohols (in solution)</td><td>CH<sub>3</sub>OH &gt; 1&deg; &gt; 2&deg; &gt; 3&deg;</td><td>+I of alkyl groups destabilises the alkoxide; bulky alkyl groups hinder solvation of the anion. In the gas phase the order reverses (polarisability).</td></tr>
+<tr><td>Substituted benzoic acids (ortho effect)</td><td>Almost any ortho substituent makes the acid stronger than benzoic acid, whether donating or withdrawing. Example: o-toluic &gt; benzoic &gt; p-toluic. With &minus;NO<sub>2</sub>: ortho &gt; para &asymp; meta &gt; benzoic.</td><td>Steric inhibition of resonance: the ortho group twists &minus;COOH out of the ring plane, so the ring cannot donate electrons into it. This increases acidity. o-hydroxybenzoic acid is also strengthened by intramolecular H-bond stabilising the anion.</td></tr>
+<tr><td>Substituted benzoic acids (para/meta)</td><td>p-nitro or m-nitro &gt; benzoic &gt; p-OCH<sub>3</sub> &asymp; p-CH<sub>3</sub></td><td>&minus;M/&minus;I groups stabilise the anion; +M/+I groups destabilise it.</td></tr>
+<tr><td>Amines (aqueous basicity)</td><td>(CH<sub>3</sub>)<sub>2</sub>NH &gt; CH<sub>3</sub>NH<sub>2</sub> &gt; (CH<sub>3</sub>)<sub>3</sub>N &gt; NH<sub>3</sub>. For ethyl: (C<sub>2</sub>H<sub>5</sub>)<sub>2</sub>NH &gt; (C<sub>2</sub>H<sub>5</sub>)<sub>3</sub>N &gt; C<sub>2</sub>H<sub>5</sub>NH<sub>2</sub> &gt; NH<sub>3</sub>. Aromatic: p-toluidine &gt; aniline &gt; p-nitroaniline. Aliphatic amines &gt; NH<sub>3</sub> &gt; aniline.</td><td>Combined effect of +I (stabilises R<sub>3</sub>NH<sup>+</sup>) and solvation (H-bonding, falls from 1&deg; to 3&deg;) and steric hindrance. Aniline's lone pair is delocalised into the ring. Ortho-substituted anilines (any group) are weaker bases than aniline (ortho effect).</td></tr>
+<tr><td>Hybridisation of N</td><td>sp<sup>3</sup> amine &gt; sp<sup>2</sup> (pyridine-type) &gt; sp (nitrile)</td><td>More s-character holds the lone pair closer to the nucleus, so it is less available.</td></tr>
+<tr><td>C&minus;H acidity</td><td>HC&equiv;CH &gt; CH<sub>2</sub>=CH<sub>2</sub> &gt; CH<sub>3</sub>&minus;CH<sub>3</sub></td><td>The carbanion is more stable with more s-character (sp 50% &gt; sp<sup>2</sup> 33% &gt; sp<sup>3</sup> 25%), since s electrons are held closer to the nucleus.</td></tr>
+</table>
+<div class="box">CHECK: whether H<sub>2</sub>O is more acidic than CH<sub>3</sub>OH (textbook ladders list H<sub>2</sub>O &gt; ROH; measured pKa values are very close). Also verify numerical pKa/pKb values you intend to quote.</div>
+
+<h2>5. Nucleophiles, electrophiles and reaction types</h2>
+<table>
+<tr><th>Term</th><th>Description</th><th>Examples</th></tr>
+<tr><td>Nucleophile</td><td>Electron-rich species that donates an electron pair</td><td>Anions: OH<sup>&minus;</sup>, OR<sup>&minus;</sup>, CN<sup>&minus;</sup>, I<sup>&minus;</sup>, enolates. Neutral: NH<sub>3</sub>, H<sub>2</sub>O, ROH, R<sub>3</sub>N. Ambident: CN<sup>&minus;</sup>, NO<sub>2</sub><sup>&minus;</sup>, enolate (C or O attack).</td></tr>
+<tr><td>Electrophile</td><td>Electron-poor species that accepts an electron pair</td><td>Cations: H<sup>+</sup>, NO<sub>2</sub><sup>+</sup>, R<sup>+</sup>. Lewis acids: AlCl<sub>3</sub>, BF<sub>3</sub>, FeCl<sub>3</sub>. Neutral: SO<sub>3</sub>, carbonyl carbon (&delta;+), carbene.</td></tr>
+<tr><td>Nucleophilicity trends</td><td colspan="2">Along a period: decreases with electronegativity (NH<sub>2</sub><sup>&minus;</sup> &gt; OH<sup>&minus;</sup> &gt; F<sup>&minus;</sup>). Down a group in protic solvents: I<sup>&minus;</sup> &gt; Br<sup>&minus;</sup> &gt; Cl<sup>&minus;</sup> &gt; F<sup>&minus;</sup>. In polar aprotic solvents the order reverses toward basicity (F<sup>&minus;</sup> most reactive). A negatively charged species is more nucleophilic than its neutral conjugate acid.</td></tr>
+</table>
+<table>
+<tr><th>Reaction type</th><th>What happens</th></tr>
+<tr><td>Substitution (S<sub>N</sub>1, S<sub>N</sub>2, S<sub>N</sub>i, S<sub>E</sub>Ar)</td><td>One atom/group replaced by another. S<sub>N</sub>1: carbocation, racemisation, 3&deg; favoured. S<sub>N</sub>2: one step, inversion, 1&deg; favoured.</td></tr>
+<tr><td>Addition (electrophilic, nucleophilic, radical)</td><td>Reagent adds across a multiple bond. Alkenes: electrophilic. C=O: nucleophilic.</td></tr>
+<tr><td>Elimination (E1, E2, E1cB)</td><td>Loss of small molecule (HX, H<sub>2</sub>O) to form a multiple bond. Zaitsev product is usually major.</td></tr>
+<tr><td>Rearrangement</td><td>Atom/group migrates within the molecule (e.g. carbocation shifts, pinacol-pinacolone).</td></tr>
+</table>
+<table>
+<tr><th>Bond fission</th><th>How</th><th>Products and conditions</th></tr>
+<tr><td>Homolytic</td><td>Each atom keeps one electron of the bond</td><td>Free radicals. Non-polar solvent, light, heat, peroxides. Typical of non-polar bonds.</td></tr>
+<tr><td>Heterolytic</td><td>Both electrons go to the more electronegative atom</td><td>Cation + anion. Polar solvent, polar bonds. Typical of ionic mechanisms.</td></tr>
+</table>
+
+<h2>6. Nomenclature and hybridisation</h2>
+<p><b>IUPAC priority of principal functional group (decreasing):</b></p>
+<p>&minus;COOH &gt; &minus;SO<sub>3</sub>H &gt; anhydride &gt; ester &gt; acid halide (&minus;COX) &gt; amide (&minus;CONH<sub>2</sub>) &gt; nitrile (&minus;CN) &gt; aldehyde (&minus;CHO) &gt; ketone (C=O) &gt; alcohol (&minus;OH) &gt; thiol (&minus;SH) &gt; amine (&minus;NH<sub>2</sub>) &gt; alkene (C=C) &gt; alkyne (C&equiv;C). Halo, nitro, alkoxy (&minus;OR) are only prefixes.</p>
+<p>Rules: choose the longest chain containing the principal group; give the principal group the lowest locant, then multiple bonds, then substituents; list prefixes alphabetically.</p>
+<table>
+<tr><th>Bond (type)</th><th>Hybridisation of C</th><th>s-character</th><th>Bond length (approx.)</th></tr>
+<tr><td>C&minus;C</td><td>sp<sup>3</sup>&minus;sp<sup>3</sup></td><td>25%</td><td>154 pm</td></tr>
+<tr><td>C=C</td><td>sp<sup>2</sup></td><td>33%</td><td>134 pm</td></tr>
+<tr><td>C&equiv;C</td><td>sp</td><td>50%</td><td>120 pm</td></tr>
+<tr><td>C&minus;H</td><td>sp<sup>3</sup> / sp<sup>2</sup> / sp</td><td>25 / 33 / 50%</td><td>about 109 / 108 / 106 pm</td></tr>
+</table>
+<p>Trend: more s-character gives a shorter, stronger bond, higher electronegativity of C, higher C&minus;H acidity. Bond length: C&minus;C &gt; C=C &gt; C&equiv;C.</p>
+<div class="box">CHECK: confirm bond lengths and the alkene vs alkyne locant tie-break against your IUPAC reference.</div>
+
+<h2>7. Common traps and exceptions</h2>
+<div class="box"><b>Halogens are odd:</b> &minus;I &gt; +M, so they deactivate the ring, but the +M still makes them ortho/para-directing. For para-halobenzoic acids, p-F is a weaker acid than p-Cl because 2p-2p overlap makes +M stronger for F.</div>
+<div class="box"><b>Carbocation and carbanion orders are opposite.</b> Alkyl groups help cations (+I, hyperconjugation) and hurt anions. Among alkyl carbanions, CH<sub>3</sub><sup>&minus;</sup> is the most stable.</div>
+<div class="box"><b>Aromaticity beats the usual order:</b> cyclopentadiene is unusually acidic (aromatic anion); cyclopentadienyl cation is antiaromatic and very unstable.</div>
+<div class="box"><b>Bridgehead cations cannot be planar</b> in small bicyclic systems, so they are very unstable even if tertiary. Resonance needs planarity.</div>
+<div class="box"><b>Ortho effect works against the usual order:</b> an electron-donating ortho group can still increase acidity of benzoic acid, and decrease basicity of aniline. Do not apply para/meta logic to ortho.</div>
+<div class="box"><b>Meta position cannot use resonance:</b> m-nitrophenol is less acidic than p-nitrophenol. Also, amides are not basic since the N lone pair is delocalised onto C=O, and pyrrole is not basic for the same reason.</div>
+<div class="box">CHECK: relative stability of allyl and benzyl cations against 2&deg; and 3&deg; alkyl cations is context-dependent (gas phase vs solution). Prefer the order stated in your book rather than a single universal order.</div>
+
+<h2>8. Practice questions</h2>
+<details><summary>Q1 (conceptual). Count the hyperconjugative (no-bond) structures for 2-methylbut-2-ene, (CH<sub>3</sub>)<sub>2</sub>C=CH&minus;CH<sub>3</sub>.</summary>
+<p><b>Answer: 9.</b> Count the &alpha;-H on carbons attached to the C=C: two CH<sub>3</sub> on C2 give 6, and the CH<sub>3</sub> on C3 gives 3. Total 9.</p></details>
+<details><summary>Q2 (conceptual, multiple correct). In which of these is the central carbon sp<sup>2</sup>-hybridised? (A) CH<sub>3</sub><sup>+</sup> (B) CH<sub>3</sub><sup>&minus;</sup> (C) CH<sub>3</sub>&bull; (D) singlet :CH<sub>2</sub></summary>
+<p><b>Answer: A, C, D.</b> CH<sub>3</sub><sup>+</sup> is trigonal planar (sp<sup>2</sup>). CH<sub>3</sub>&bull; is taken as planar sp<sup>2</sup> in the standard treatment. Singlet carbene is bent sp<sup>2</sup>. CH<sub>3</sub><sup>&minus;</sup> is pyramidal sp<sup>3</sup>.</p></details>
+<details><summary>Q3 (conceptual). Why is p-nitrophenol more acidic than phenol, while p-methoxyphenol is less acidic?</summary>
+<p>The p-NO<sub>2</sub> group stabilises the phenoxide ion by &minus;M and &minus;I (negative charge delocalised onto nitro O atoms). At para, OCH<sub>3</sub> shows +M &gt; &minus;I, so it pushes electron density onto the phenoxide O and destabilises it.</p></details>
+<details><summary>Q4 (conceptual). Why is aniline a weaker base than ammonia and than cyclohexylamine?</summary>
+<p>The N lone pair of aniline is delocalised into the benzene ring by resonance, so it is less available to accept H<sup>+</sup>. The anilinium ion has no such stabilisation. Cyclohexylamine has +I groups and no delocalisation, so it is a stronger base than NH<sub>3</sub>.</p></details>
+<details><summary>Q5 (order). Arrange in decreasing acidity: CH<sub>3</sub>COOH, ClCH<sub>2</sub>COOH, Cl<sub>2</sub>CHCOOH, ICH<sub>2</sub>COOH.</summary>
+<p><b>Cl<sub>2</sub>CHCOOH &gt; ClCH<sub>2</sub>COOH &gt; ICH<sub>2</sub>COOH &gt; CH<sub>3</sub>COOH.</b> More &minus;I halogens stabilise the carboxylate better; Cl has a stronger &minus;I than I.</p></details>
+<details><summary>Q6 (order). Arrange in decreasing aqueous basicity: (CH<sub>3</sub>)<sub>3</sub>N, (CH<sub>3</sub>)<sub>2</sub>NH, CH<sub>3</sub>NH<sub>2</sub>, NH<sub>3</sub>, C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>.</summary>
+<p><b>(CH<sub>3</sub>)<sub>2</sub>NH &gt; CH<sub>3</sub>NH<sub>2</sub> &gt; (CH<sub>3</sub>)<sub>3</sub>N &gt; NH<sub>3</sub> &gt; C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>.</b> +I raises basicity, but 3&deg; amines lose from poor solvation of the cation and steric hindrance. Aniline is weakest due to resonance delocalisation.</p></details>
+<details><summary>Q7 (order). Arrange in decreasing acidity: phenol, p-nitrophenol, m-nitrophenol, p-cresol.</summary>
+<p><b>p-nitrophenol &gt; m-nitrophenol &gt; phenol &gt; p-cresol.</b> p-NO<sub>2</sub> acts by &minus;M and &minus;I; m-NO<sub>2</sub> only by &minus;I; the methyl group of p-cresol donates electrons (+I and hyperconjugation) and weakens acidity.</p></details>
+<details><summary>Q8 (tricky, multiple correct). Which statements are correct? (A) o-toluic acid is more acidic than benzoic acid. (B) p-toluic acid is more acidic than benzoic acid. (C) o-nitrobenzoic acid is more acidic than p-nitrobenzoic acid. (D) p-methoxybenzoic acid is less acidic than benzoic acid.</summary>
+<p><b>Answer: A, C, D.</b> (A) is the ortho effect (steric inhibition of resonance). (B) is false: p-CH<sub>3</sub> donates electrons, so p-toluic acid is weaker. (C) is true: &minus;I of the nearby NO<sub>2</sub> is strongest at ortho, plus the ortho effect. (D) is true: +M of OCH<sub>3</sub> at para dominates.</p></details>
+<details><summary>Q9 (tricky). The cation (CH<sub>3</sub>)<sub>2</sub>CH&minus;CH<sup>+</sup>&minus;CH<sub>3</sub> rearranges. Give the product cation and its number of &alpha;-H.</summary>
+<p>A 1,2-hydride shift moves H from the tertiary carbon to the cationic carbon, giving the tertiary cation (CH<sub>3</sub>)<sub>2</sub>C<sup>+</sup>&minus;CH<sub>2</sub>CH<sub>3</sub> (2-methylbutan-2-yl cation). &alpha;-H count: two CH<sub>3</sub> (6 H) plus CH<sub>2</sub> (2 H) = <b>8</b>.</p></details>
+<details><summary>Q10 (tricky). Give the IUPAC name of CH<sub>2</sub>=CH&minus;CH(OH)&minus;CH<sub>2</sub>&minus;COOH and the hybridisation of C-4.</summary>
+<p>The principal group is &minus;COOH (C1), then C2 (CH<sub>2</sub>), C3 (CHOH), C4 (=CH), C5 (=CH<sub>2</sub>). Name: <b>3-hydroxypent-4-enoic acid</b>. C-4 is part of C=C, so it is <b>sp<sup>2</sup></b>. The OH is only a prefix because the acid group has higher priority.</p></details>
+
+<h2>9. Related chapters</h2>
+<p><a href="Hydrocarbons.html">Hydrocarbons</a>, <a href="Isomerism.html">Isomerism</a>, <a href="../class12/Haloalkanes.html">Haloalkanes</a></p>
+
+<h2>JEE Advanced trend (from your books)</h2>
+<p style="color:var(--mut)">Edit the STATS object at the bottom of this file with questions-per-year from your books. Nothing shows until you do.</p><div class="bars" id="bars"></div><div style="height:44px"></div>
+</main>
+<script>
+// REPLACE with real numbers from the book, e.g. {2019:2, 2020:1}. Left empty on purpose.
+const STATS={};
+const k=Object.keys(STATS);if(k.length){const m=Math.max(...k.map(y=>STATS[y]),1);
+document.getElementById('bars').innerHTML=k.map(y=>`<div style="height:${STATS[y]/m*100}%"><span>${y}<br>${STATS[y]}</span></div>`).join('')}
+</script></body></html>
