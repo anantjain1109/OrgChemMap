@@ -4,7 +4,7 @@
 // ready: true only once the HTML file exists in the repo
 window.CHAPTERS = [
  {id:"GOC", title:"General Organic Chemistry", cls:11, weightage:9, file:"chapter/class11/GOC.html", links:["Hydrocarbons","Isomerism","Haloalkanes"], ready:true},
- {id:"Isomerism", title:"Isomerism & Stereochemistry", cls:11, weightage:8, file:"chapter/class11/Isomerism.html", links:["GOC","Haloalkanes","Biomolecules"], ready:false},
+ {id:"Isomerism", title:"Isomerism & Stereochemistry", cls:11, weightage:8, file:"chapter/class11/Isomerism.html", links:["GOC","Haloalkanes","Biomolecules"], ready:true},
  {id:"Hydrocarbons", title:"Hydrocarbons", cls:11, weightage:7, file:"chapter/class11/Hydrocarbons.html", links:["GOC","Aromatic","Haloalkanes"], ready:false},
  {id:"Aromatic", title:"Benzene & Aromatic Compounds", cls:11, weightage:7, file:"chapter/class11/Aromatic.html", links:["Hydrocarbons","Amines","Phenols"], ready:false},
  {id:"Purification", title:"Purification & Analysis", cls:11, weightage:5, file:"chapter/class11/Purification.html", links:["GOC"], ready:false},
