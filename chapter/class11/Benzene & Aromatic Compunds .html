@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benzene & Aromatic Compounds - OrgChemMap</title>
+    <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent-color: #58a6ff;
+            --accent-success: #2ea44f;
+            --accent-warning: #d29922;
+            --accent-danger: #f85149;
+            --border-color: #30363d;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            margin-top: 25px;
+        }
+
+        p, ul, ol {
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background-color: var(--bg-secondary);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-primary);
+        }
+
+        tr:hover td {
+            background-color: var(--bg-secondary);
+        }
+
+        .trap-box {
+            background-color: rgba(210, 153, 34, 0.1);
+            border-left: 4px solid var(--accent-warning);
+            padding: 15px;
+            border-radius: 0 6px 6px 0;
+            margin: 20px 0;
+        }
+
+        .trap-box h4 {
+            margin: 0 0 8px 0;
+            color: var(--accent-warning);
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        details {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            margin-bottom: 12px;
+            padding: 12px;
+        }
+
+        details[open] {
+            padding-bottom: 16px;
+        }
+
+        summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: #ffffff;
+            outline: none;
+            user-select: none;
+        }
+
+        summary:hover {
+            color: var(--accent-color);
+        }
+
+        .solution-box {
+            margin-top: 12px;
+            padding: 12px;
+            background-color: var(--bg-primary);
+            border-left: 3px solid var(--accent-success);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .trend-box {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .related-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+
+        .related-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .related-links a:hover {
+            text-decoration: underline;
+        }
+
+        .order-list li {
+            margin-bottom: 10px;
+        }
+
+        .bold-text {
+            color: #ffffff;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+            <h1>Benzene & Aromatic Compounds</h1>
+            <p style="color: var(--text-secondary); margin: 0;">Class 11 &bull; Core Organic Chemistry Focus Area</p>
+        </header>
+
+        <section id="summary">
+            <h2>1. Chapter Summary</h2>
+            <p>This chapter centers around the fundamental concept of <strong>aromaticity</strong>, characterized by unusual structural stability resulting from a continuous cyclic delocalised cloud of (4n + 2) &pi;-electrons (Hückel's Rule). The primary chemical behavior of these systems is dominated by <strong>Electrophilic Aromatic Substitution (S<sub>E</sub>Ar)</strong> reactions rather than addition reactions, ensuring the highly stable aromatic core remains intact. Advanced JEE problems typically test the multi-step synthetic sequences involving regioselective substituent orientation, activation/deactivation matrices, and competing side-chain pathways.</p>
+        </section>
+
+        <section id="mechanisms">
+            <h2>2. Reaction Mechanisms</h2>
+            <h3>Electrophilic Aromatic Substitution (S<sub>E</sub>Ar) General Scheme</h3>
+            <ol>
+                <li><strong>Step 1: Generation of the Electrophile (E<sup>+</sup>)</strong> &mdash; Achieved using specialized Lewis/Brønsted acid catalysts.</li>
+                <li><strong>Step 2: Attack of the Aromatic &pi; System on E<sup>+</sup></strong> &mdash; Formation of a resonance-stabilised carbocation intermediate, known as the <strong>Sigma Complex</strong> or <strong>Arenium Ion</strong>. Aromaticity is temporarily disrupted here. <span class="bold-text">(Rate-Determining Step - RDS)</span></li>
+                <li><strong>Step 3: Deprotonation by a Base</strong> &mdash; Rapid loss of H<sup>+</sup> from the sp<sup>3</sup> hybridised carbon atom to restore the aromatic system.</li>
+            </ol>
+            <p><strong>Favoured by:</strong> Stronger electron-donating groups attached to the ring (+R, +I effects), which stabilise the positive charge build-up in the Arenium Ion transition state.</p>
+
+            <h3>Friedel-Crafts Alkylation &amp; Acylation Rearrangements</h3>
+            <ul>
+                <li><strong>Alkylation:</strong> Electrophile is a carbocation (R<sup>+</sup>). Whenever possible, 1&deg; or 2&deg; carbocation complexes undergo <strong>1,2-hydride</strong> or <strong>1,2-methyl shifts</strong> to yield a more stable carbocation before attacking the aromatic ring.</li>
+                <li><strong>Acylation:</strong> Electrophile is the <strong>acylium ion</strong> (R-C<sup>+</sup>=O &harr; R-C&equiv;O<sup>+</sup>). This ion is exceptionally resonance-stabilised and <strong>does not undergo skeletal carbocation rearrangements</strong>, making acylation an effective route for constructing unbranched side chains via subsequent reduction.</li>
+            </ul>
+        </section>
+
+        <section id="reactions-table">
+            <h2>3. Reactions and Reagents Matrix</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reaction Name</th>
+                            <th>Reagents &amp; Conditions</th>
+                            <th>Major Product</th>
+                            <th>JEE Benchmark Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bold-text">Nitration</td>
+                            <td>Conc. HNO<sub>3</sub> + Conc. H<sub>2</sub>SO<sub>4</sub>, &Delta;</td>
+                            <td>Nitrobenzene</td>
+                            <td>H<sub>2</sub>SO<sub>4</sub> acts as an acid; HNO<sub>3</sub> acts as a base to generate NO<sub>2</sub><sup>+</sup>.</td>
+                        </tr>
+                        <tr>
+                            <td class="bold-text">Sulfonation</td>
+                            <td>Fuming H<sub>2</sub>SO<sub>4</sub> (Oleum) or Conc. H<sub>2</sub>SO<sub>4</sub></td>
+                            <td>Benzenesulfonic Acid</td>
+                            <td>Reversible reaction. Active electrophile is neutral SO<sub>3</sub>. Significant kinetic isotope effect.</td>
+                        </tr>
+                        <tr>
+                            <td class="bold-text">Halogenation</td>
+                            <td>X<sub>2</sub> (Cl<sub>2</sub> or Br<sub>2</sub>) + FeX<sub>3</sub> or AlX<sub>3</sub> (anhydrous)</td>
+                            <td>Halobenzene</td>
+                            <td>Lewis acid abstracts halide to produce powerful E<sup>+</sup> species (X<sup>+</sup> or complex).</td>
+                        </tr>
+                        <tr>
