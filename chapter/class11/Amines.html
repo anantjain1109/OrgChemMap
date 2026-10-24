@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amines &amp; Diazonium Salts - OrgChemMap</title>
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --accent-color: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --accent-light: rgba(56, 189, 248, 0.1);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --warning-border: #f59e0b;
+      --warning-bg: rgba(245, 158, 11, 0.08);
+      --success-color: #10b981;
+      --tag-bg: #0f2744;
+      --tag-text: #7dd3fc;
+      --code-bg: #0b1120;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      padding: 1.5rem;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1.25rem;
+    }
+
+    .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--accent-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-back:hover {
+      color: var(--accent-hover);
+    }
+
+    .badge-class {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .chapter-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    h2 {
+      color: var(--accent-color);
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      color: #e2e8f0;
+      font-size: 1.1rem;
+      margin: 1.25rem 0 0.5rem 0;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+    }
+
+    /* Tables */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      margin: 1rem 0;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+      min-width: 620px;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+      vertical-align: top;
+    }
+
+    th {
+      background-color: rgba(15, 23, 42, 0.6);
+      color: var(--accent-color);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Lists & Mechanisms */
+    ol, ul {
+      padding-left: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    .mechanism-card {
+      background: var(--code-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .mechanism-title {
+      font-weight: 700;
+      color: #38bdf8;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
+    .rds-badge {
+      display: inline-block;
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 3px;
+      padding: 0.1rem 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: 0.4rem;
+    }
+
+    .favoured-tag {
+      color: var(--success-color);
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-top: 0.35rem;
+    }
+
+    /* Traps & Exceptions */
+    .trap-box {
+      border-left: 3px solid var(--warning-border);
+      background: var(--warning-bg);
+      padding: 0.85rem 1rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 0.85rem;
+      font-size: 0.92rem;
+    }
+
+    .trap-box strong {
+      color: #fbbf24;
+    }
+
+    /* Practice Questions */
+    details {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      transition: background 0.2s ease;
+    }
+
+    details[open] {
+      background: rgba(15, 23, 42, 0.85);
+      border-color: #475569;
+    }
+
+    summary {
+      padding: 0.85rem 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      color: #e2e8f0;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      color: var(--accent-color);
+      font-size: 1.2rem;
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    .solution {
+      padding: 0.85rem 1rem;
+      border-top: 1px solid var(--card-border);
+      background: rgba(0, 0, 0, 0.25);
+      font-size: 0.92rem;
+      color: #cbd5e1;
+    }
+
+    .solution strong {
+      color: var(--accent-color);
+    }
+
+    /* Related Chapters & Trends */
+    .related-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .related-chip {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      transition: all 0.2s;
+    }
+
+    .related-chip:hover {
+      background: var(--accent-color);
+      color: #0f172a;
+    }
+
+    #trend-container {
+      margin-top: 0.75rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--card-border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="../../index.html" class="nav-back">&larr; Back to Map</a>
+    <div>
+      <span class="badge-class">Class 12</span>
+      <h1>Amines &amp; Diazonium Salts</h1>
+      <p class="chapter-desc">Nitrogenous bases, nucleophilic substitutions, elimination cascades, molecular rearrangements, and diazonium synthetic transformations for JEE Advanced.</p>
+    </div>
+  </header>
+
+  <!-- 1. CORE IDEAS SUMMARY -->
+  <section id="summary">
+    <h2>1. Chapter Overview &amp; Core Principles</h2>
+    <p>Amines represent trivalent nitrogen centers bearing a non-bonding lone pair, establishing them simultaneously as <strong>Lewis bases</strong> and <strong>nucleophiles</strong>. The tetrahedral geometry is conformationally dynamic due to <em>pyramidal inversion</em> (nitrogen inversion through a planar transition state, activation energy ~25 kJ/mol), making chiral unconstrained tertiary amines <code>N(R<sub>1</sub>)(R<sub>2</sub>)(R<sub>3</sub>)</code> non-resolvable at ambient temperature.</p>
+    <p>Aromatic amines (e.g., aniline) exhibit extensive +M delocalisation of the nitrogen lone pair into the aromatic ring, significantly decreasing basicity while drastically activating the ring towards electrophilic aromatic substitution (EAS). Arenediazonium salts [ArN<sub>2</sub><sup>+</sup> X<sup>&minus;</sup>], stabilized at 0&ndash;5&deg;C via resonance, possess the exceptional <strong>N<sub>2</sub> leaving group</strong>, serving as the master gateway connecting aromatic nitro groups to halides, nitriles, phenols, and azo-dyes.</p>
+  </section>
+
+  <!-- 2. MECHANISMS -->
+  <section id="mechanisms">
+    <h2>2. Key Reaction Mechanisms</h2>
+
+    <div class="mechanism-card">
+      <div class="mechanism-title">1. Hofmann Bromamide Degradation <span class="rds-badge">RDS: Intramolecular Migration</span></div>
+      <p>Conversion of 1&deg; amides to 1&deg; amines with loss of one carbon (carbonyl carbon lost as CO<sub>3</sub><sup>2&minus;</sup>).</p>
+      <ol>
+        <li><strong>Deprotonation:</strong> Hydroxide removes an acidic proton from R&minus;CONH<sub>2</sub> generating the resonance-stabilized amidate anion.</li>
+        <li><strong>Bromination:</strong> Attack of amidate on Br<sub>2</sub> yields <em>N</em>-bromoamide (R&minus;CONHBr).</li>
+        <li><strong>Second Deprotonation:</strong> Base removes the second proton from <em>N</em>-bromoamide, forming the conjugate base [R&minus;CON&minus;Br]<sup>&minus;</sup>.</li>
+        <li><strong>Concerted Rearrangement (RDS):</strong> Intramolecular 1,2-migration of the R group with its electron pair from carbonyl carbon to nitrogen, concerted with the displacement of Br<sup>&minus;</sup>. Forms <strong>Alkyl Isocyanate (R&minus;N=C=O)</strong> with complete retention of configuration at the migrating chiral center.</li>
+        <li><strong>Hydrolysis:</strong> Attack of H<sub>2</sub>O/OH<sup>&minus;</sup> on isocyanate gives an unstable carbamic acid intermediate (R&minus;NHCOOH), which rapidly decarboxylates to yield R&minus;NH<sub>2</sub> + CO<sub>3</sub><sup>2&minus;</sup>.</li>
+      </ol>
+      <div class="favoured-tag">&check; Favoured by: Electron-donating groups on aromatic R (accelerates migration to electron-deficient N), strong alkaline media (4 eq KOH per 1 eq Br<sub>2</sub>).</div>
+    </div>
+
+    <div class="mechanism-card">
+      <div class="mechanism-title">2. Gabriel Phthalimide Synthesis <span class="rds-badge">RDS: S<sub>N</sub>2 Alkylation</span></div>
+      <p>Clean preparation of pure 1&deg; aliphatic amines without contamination from 2&deg; or 3&deg; amines.</p>
+      <ol>
+        <li><strong>Deprotonation:</strong> Ethanolic KOH deprotonates phthalimide (pKa ~8.3) to generate potassium phthalimide nucleophile.</li>
+        <li><strong>S<sub>N</sub>2 Displacement (RDS):</strong> Phthalimide anion attacks an unhindered alkyl halide (R&minus;CH<sub>2</sub>&minus;X) in an S<sub>N</sub>2 step, expelling X<sup>&minus;</sup> to form <em>N</em>-alkylphthalimide.</li>
+        <li><strong>Cleavage:</strong> Alkaline hydrolysis (aq. NaOH) or nucleophilic hydrazinolysis (NH<sub>2</sub>NH<sub>2</sub>, Ing-Manske procedure) cleaves both imide C&minus;N bonds, liberating pure 1&deg; alkyl amine and phthalate salt (or phthalhydrazide).</li>
+      </ol>
+      <div class="favoured-tag">&check; Favoured by: Methyl and unhindered 1&deg; alkyl halides, polar aprotic solvents (DMF, DMSO). Fails completely for aryl and vinyl halides (no S<sub>N</sub>2) and 3&deg; halides (leads exclusively to E2 alkene).</div>
+    </div>
+
+    <div class="mechanism-card">
+      <div class="mechanism-title">3. Diazotization of Primary Aromatic Amines <span class="rds-badge">RDS: Nitrosonium Generation / Attack</span></div>
+      <p>Generation of arenediazonium chloride [Ar&minus;N&equiv;N]<sup>+</sup> Cl<sup>&minus;</sup> at 273&ndash;278 K.</p>
+      <ol>
+        <li><strong>Generation of Nitrosonium ion:</strong> Protonation of nitrous acid (HONO) in conc. HCl yields [H<sub>2</sub>O<sup>+</sup>&minus;NO], which loses water to form the active electrophile, nitrosonium ion (<sup>+</sup>N=O).</li>
+        <li><strong>Nucleophilic Attack:</strong> Ar&minus;NH<sub>2</sub> attacks <sup>+</sup>N=O to form <em>N</em>-nitrosammonium cation [Ar&minus;NH<sub>2</sub>&minus;NO]<sup>+</sup>.</li>
+        <li><strong>Proton Shifts &amp; Tautomerization:</strong> Deprotonation gives <em>N</em>-nitrosamine (Ar&minus;NH&minus;NO), which undergoes rapid prototropic shift to diazohydroxide (Ar&minus;N=N&minus;OH).</li>
+        <li><strong>Dehydration:</strong> Protonation of the &minus;OH group followed by water expulsion yields the resonance-stabilized arenediazonium cation [Ar&minus;N&equiv;N &harr; Ar&minus;N<sup>+</sup>=N<sup>&minus;</sup>].</li>
+      </ol>
+      <div class="favoured-tag">&check; Favoured by: Low temperature (0&ndash;5&deg;C) to prevent thermal decomposition via heterolysis to aryl cation, strong mineral acid excess to avoid triazene coupling with unreacted amine.</div>
+    </div>
+
+    <div class="mechanism-card">
+      <div class="mechanism-title">4. Hofmann Exhaustive Methylation &amp; Elimination <span class="rds-badge">RDS: E2 C&minus;H Bond Cleavage</span></div>
+      <p>Regioselective formation of the least substituted alkene from quaternary ammonium hydroxides.</p>
+      <ol>
+        <li><strong>Exhaustive Alkylation:</strong> Amine is treated with excess CH<sub>3</sub>I until converted to quaternary ammonium iodide [R&minus;N<sup>+</sup>(CH<sub>3</sub>)<sub>3</sub>] I<sup>&minus;</sup>.</li>
+        <li><strong>Silver Oxide Treatment:</strong> Wet Ag<sub>2</sub>O (or AgOH) precipitates AgI(s), yielding quaternary ammonium hydroxide [R&minus;N<sup>+</sup>(CH<sub>3</sub>)<sub>3</sub>] OH<sup>&minus;</sup> in solution.</li>
+        <li><strong>E2 Elimination (RDS):</strong> Heating drives concerted anti-periplanar E2 elimination. Hydroxide abstracts the most acidic &beta;-hydrogen (from the least sterically hindered &beta;-carbon) because the bulky &minus;N<sup>+</sup>(CH<sub>3</sub>)<sub>3</sub> leaving group enforces a carbanion-like transition state (Hofmann rule).</li>
+      </ol>
+      <div class="favoured-tag">&check; Favoured by: Bulky leaving groups (&minus;N<sup>+</sup>Me<sub>3</sub>, &minus;S<sup>+</sup>Me<sub>2</sub>), high steric hindrance, and presence of acidic &beta;-hydrogens.</div>
+    </div>
+  </section>
+
+  <!-- 3. REACTIONS & REAGENTS TABLE -->
+  <section id="reactions">
+    <h2>3. Master Reactions &amp; Reagents</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Reaction Name</th>
+            <th>Substrate &amp; Reagent</th>
+            <th>Major Product</th>
+            <th>Key JEE Mechanism / Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hofmann Bromamide</strong></td>
+            <td>RCONH<sub>2</sub> + Br<sub>2</sub> + 4KOH (&Delta;)</td>
+            <td>R&minus;NH<sub>2</sub> + K<sub>2</sub>CO<sub>3</sub> + 2KBr</td>
+            <td>Step-down reaction; retention of configuration at migrating carbon; no crossover observed.</td>
+          </tr>
+          <tr>
+            <td><strong>Gabriel Phthalimide</strong></td>
+            <td>Phthalimide + KOH, then 1&deg; R&minus;X, then H<sub>3</sub>O<sup>+</sup> or N<sub>2</sub>H<sub>4</sub></td>
+            <td>R&minus;NH<sub>2</sub> (Pure 1&deg;)</td>
+            <td>Strictly S<sub>N</sub>2; fails on 2&deg;/3&deg; halides, haloarenes, and haloalkenes.</td>
+          </tr>
+          <tr>
+            <td><strong>Carbylamine Test</strong></td>
+            <td>R&minus;NH<sub>2</sub> / Ar&minus;NH<sub>2</sub> + CHCl<sub>3</sub> + 3KOH (&Delta;)</td>
+            <td>R&minus;NC / Ar&minus;NC (Isocyanide)</td>
+            <td>Specific test for 1&deg; amines; reactive intermediate is singlet dichlorocarbene (:CCl<sub>2</sub>); extremely foul odor.</td>
+          </tr>
+          <tr>
+            <td><strong>Hinsberg Test</strong></td>
+            <td>Amine + PhSO<sub>2</sub>Cl (aq. KOH)</td>
+            <td>1&deg;: Soluble salt; 2&deg;: Insoluble ppt; 3&deg;: No reaction</td>
+            <td>1&deg; gives PhSO<sub>2</sub>NHR with acidic H (dissolves in base); 2&deg; gives PhSO<sub>2</sub>NR<sub>2</sub> (no acidic H, alkali insoluble).</td>
+          </tr>
+          <tr>
+            <td><strong>Aliphatic Nitrous Acid Reaction</strong></td>
+            <td>R&minus;NH<sub>2</sub> + NaNO<sub>2</sub> + HCl (aq)</td>
+            <td>ROH + Alkenes + Alkyl Chlorides + N<sub>2</sub>&uarr;</td>
+            <td>Forms unstable R&minus;N<sub>2</sub><sup>+</sup> which instantly loses N<sub>2</sub> to give carbocation (undergoes rearrangement). Quantitative N<sub>2</sub> release (Van Slyke method).</td>
+          </tr>
+          <tr>
+            <td><strong>Sandmeyer Reaction</strong></td>
+            <td>ArN<sub>2</sub><sup>+</sup> Cl<sup>&minus;</sup> + CuCl/HCl or CuBr/HBr or CuCN/KCN</td>
+            <td>Ar&minus;Cl, Ar&minus;Br, Ar&minus;CN</td>
+            <td>Copper(I) catalyzed radical-nucleophilic substitution involving aryl free radical intermediates.</td>
+          </tr>
+          <tr>
+            <td><strong>Gattermann Reaction</strong></td>
+            <td>ArN<sub>2</sub><sup>+</sup> Cl<sup>&minus;</sup> + Cu powder + HX (HCl or HBr)</td>
+            <td>Ar&minus;Cl, Ar&minus;Br</td>
+            <td>Variant of Sandmeyer using metallic copper powder; generally lower yields than Sandmeyer.</td>
+          </tr>
+          <tr>
+            <td><strong>Schiemann Reaction</strong></td>
+            <td>ArN<sub>2</sub><sup>+</sup> Cl<sup>&minus;</sup> + HBF<sub>4</sub> &rarr; ArN<sub>2</sub><sup>+</sup> BF<sub>4</sub><sup>&minus;</sup> (&Delta;)</td>
+            <td>Ar&minus;F + BF<sub>3</sub> + N<sub>2</sub>&uarr;</td>
+            <td>Thermal decomposition of isolated, dry fluoroborate precipitate; best route to fluoroarenes.</td>
+          </tr>
+          <tr>
+            <td><strong>Reductive Deamination</strong></td>
+            <td>ArN<sub>2</sub><sup>+</sup> Cl<sup>&minus;</sup> + H<sub>3</sub>PO<sub>2</sub>/H<sub>2</sub>O or CH<sub>3</sub>CH<sub>2</sub>OH</td>
+            <td>Ar&minus;H (Arene)</td>
+            <td>H<sub>3</sub>PO<sub>2</sub> oxidized to H<sub>3</sub>PO<sub>3</sub>; EtOH oxidized to CH<sub>3</sub>CHO. Crucial for synthesis via directed substitution followed by removal of &minus;NH<sub>2</sub>.</td>
+          </tr>
+          <tr>
+            <td><strong>Phenol Formation</strong></td>
+            <td>ArN<sub>2</sub><sup>+</sup> Cl<sup>&minus;</sup> + H<sub>2</sub>O (&Delta;, warm to ~50&deg;C)</td>
+            <td>Ar&minus;OH + N<sub>2</sub>&uarr; + HCl</td>
+            <td>Nucleophilic displacement via aryl cation-like intermediate; side-coupling avoided by strong acidity.</td>
+          </tr>
+          <tr>
+            <td><strong>Azo Coupling (Phenol)</strong></td>
+            <td>ArN<sub>2</sub><sup>+</sup> Cl<sup>&minus;</sup> + Phenol (pH 9&ndash;10, 0&ndash;5&deg;C)</td>
+            <td><em>p</em>-Hydroxyazobenzene (Orange dye)</td>
+            <td>Electrophilic aromatic substitution by weak electrophile ArN<sub>2</sub><sup>+</sup> on phenoxide ion at <em>para</em> position.</td>
+          </tr>
+          <tr>
+            <td><strong>Azo Coupling (Aniline)</strong></td>
+            <td>ArN<sub>2</sub><sup>+</sup> Cl<sup>&minus;</sup> + Aniline (pH 4&ndash;5, 0&ndash;5&deg;C)</td>
+            <td><em>p</em>-Aminoazobenzene (Yellow dye)</td>
+            <td>EAS on free aniline; weakly acidic buffer avoids protonating aniline while preventing diazonium degradation.</td>
+          </tr>
+          <tr>
+            <td><strong>Lossen Rearrangement</strong></td>
+            <td>Hydroxamic acid O-acyl derivative + Base</td>
+            <td>R&minus;NH<sub>2</sub> + R'&minus;COOH</td>
+            <td>Mechanistically identical to Hofmann/Curtius: migration of R group to electron-deficient N.</td>
+          </tr>
+          <tr>
+            <td><strong>Curtius Rearrangement</strong></td>
+            <td>Acyl azide (RCON<sub>3</sub>) + Heat (&Delta;) in inert solvent, then H<sub>2</sub>O</td>
+            <td>R&minus;NH<sub>2</sub> + N<sub>2</sub>&uarr; + CO<sub>2</sub>&uarr;</td>
+            <td>Involves loss of N<sub>2</sub> and simultaneous 1,2-shift to form isocyanate without requiring external base.</td>
+          </tr>
+          <tr>
+            <td><strong>Schmidt Reaction</strong></td>
+            <td>RCOOH + HN<sub>3</sub> (hydrazoic acid) + conc. H<sub>2</sub>SO<sub>4</sub></td>
+            <td>R&minus;NH<sub>2</sub> + CO<sub>2</sub>&uarr; + N<sub>2</sub>&uarr;</td>
+            <td>Direct conversion of carboxylic acid to one-carbon degraded amine via protonated acyl azide.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 4. COMPARISONS & ORDERS -->
+  <section id="comparisons">
+    <h2>4. Master Orders &amp; Comparisons (JEE Advanced)</h2>
+
+    <h3>A. Basicity of Aliphatic Amines in Aqueous Solution</h3>
+    <p>Aqueous basicity is governed by the interplay of three distinct factors: <strong>Inductive effect (+I)</strong>, <strong>Solvation/Hydration of cation</strong>, and <strong>Steric hindrance</strong>.</p>
+    <ul>
+      <li><strong>Methyl-substituted series:</strong> <code>(CH<sub>3</sub>)<sub>2</sub>NH &gt; CH<sub>3</sub>NH<sub>2</sub> &gt; (CH<sub>3</sub>)<sub>3</sub>N &gt; NH<sub>3</sub></code> (Order: <strong>2&deg; &gt; 1&deg; &gt; 3&deg; &gt; NH<sub>3</sub></strong>).<br>
+      <em>Reason:</em> Small methyl group creates negligible steric crowding, allowing extensive cation hydration, thus 1&deg; edges out 3&deg;.</li>
+      <li><strong>Ethyl-substituted series:</strong> <code>(C<sub>2</sub>H<sub>5</sub>)<sub>2</sub>NH &gt; (C<sub>2</sub>H<sub>5</sub>)<sub>3</sub>N &gt; C<sub>2</sub>H<sub>5</sub>NH<sub>2</sub> &gt; NH<sub>3</sub></code> (Order: <strong>2&deg; &gt; 3&deg; &gt; 1&deg; &gt; NH<sub>3</sub></strong>).<br>
+      <em>Reason:</em> Stronger +I effect of ethyl group elevates 3&deg; over 1&deg;, but steric hindrance still keeps 2&deg; at the top.</li>
+    </ul>
+
+    <h3>B. Basicity in Gas Phase or Non-Polar Solvents</h3>
+    <p><code>R<sub>3</sub>N &gt; R<sub>2</sub>NH &gt; RNH<sub>2</sub> &gt; NH<sub>3</sub></code> (Order: <strong>3&deg; &gt; 2&deg; &gt; 1&deg; &gt; NH<sub>3</sub></strong>)</p>
+    <p><em>Reason:</em> Solvation is absent; the order is governed purely by the electron-donating inductive effect (+I) dispersing positive charge in the conjugate ammonium cation.</p>
+
+    <h3>C. Aromatic vs Aliphatic Amines</h3>
+    <p><code>Cyclohexylamine &gt; Benzylamine &gt; NH<sub>3</sub> &gt; Aniline &gt; Diphenylamine &gt; Triphenylamine</code></p>
+    <p><em>Reason:</em> In aniline, the nitrogen lone pair participates in resonance with the &pi;-cloud of the benzene ring (5 resonating structures), decreasing electron availability. In benzylamine, the &minus;CH<sub>2</sub>&minus; spacer prevents resonance, behaving as a typical aliphatic amine.</p>
+
+    <h3>D. Substituted Anilines: Ortho Effect</h3>
+    <p><em>Any ortho-substituted aniline (regardless of whether the group is electron-donating or electron-withdrawing, e.g., &minus;CH<sub>3</sub>, &minus;NO<sub>2</sub>, &minus;OCH<sub>3</sub>, &minus;Cl) is significantly <strong>weaker base</strong> than aniline.</em></p>
+    <p><em>Reason:</em> <strong>Steric Inhibition of Protonation (SIP)</strong>. Protonation produces the bulky &minus;NH<sub>3</sub><sup>+</sup> group, which suffers intense steric crowding with the ortho substituent, destroying cation hydration and destabilizing the conjugate acid.</p>
+
+    <h3>E. Boiling Point Comparison</h3>
+    <p><code>Primary amine (R&minus;NH<sub>2</sub>) &gt; Secondary amine (R<sub>2</sub>NH) &gt; Tertiary amine (R<sub>3</sub>N)</code> (for isomeric amines)</p>
+    <p><em>Reason:</em> 1&deg; amines have 2 acidic N&minus;H bonds enabling extensive intermolecular H-bonding; 2&deg; amines have only 1 N&minus;H bond; 3&deg; amines have no N&minus;H bond and cannot undergo self hydrogen-bonding (associate only by dipole-dipole interactions).</p>
+  </section>
+
+  <!-- 5. COMMON TRAPS & EXCEPTIONS -->
+  <section id="traps">
+    <h2>5. Common Traps &amp; Exam Exceptions</h2>
+
+    <div class="trap-box">
+      <strong>Trap 1: Direct Nitration of Aniline Produces Significant Meta Product!</strong><br>
+      Direct treatment of aniline with conc. HNO<sub>3</sub> + conc. H<sub>2</sub>SO<sub>4</sub> gives <strong>51% para, 47% meta, and 2% ortho</strong>. In strongly acidic medium, aniline is extensively protonated to form the anilinium ion (&minus;NH<sub>3</sub><sup>+</sup>), which exerts a powerful &minus;I deactivating effect and directs the incoming nitronium electrophile to the <em>meta</em> position. To obtain <em>p</em>-nitroaniline cleanly, the &minus;NH<sub>2</sub> group must first be protected by acetylation (Ac<sub>2</sub>O/pyridine).
+    </div>
+
+    <div class="trap-box">
+      <strong>Trap 2: Aniline Does NOT Undergo Friedel-Crafts Reactions!</strong><br>
+      Aniline does not undergo Friedel-Crafts alkylation or acylation. The Lewis acid catalyst (anhydrous AlCl<sub>3</sub>) acts as a strong electron acceptor and coordinates directly with the highly basic lone pair of &minus;NH<sub>2</sub> to form an adduct: <code>Ar&minus;NH<sub>2</sub>: &rarr; AlCl<sub>3</sub></code>. This places a formal positive charge on nitrogen, deactivating the benzene ring toward electrophilic attack.
+    </div>
+
+    <div class="trap-box">
+      <strong>Trap 3: Bromine Water vs Bromine in Non-Polar Solvent on Aniline</strong><br>
+      Aniline with Br<sub>2</sub>/H<sub>2</sub>O produces a white precipitate of <strong>2,4,6-tribromoaniline</strong> instantaneously without any catalyst because &minus;NH<sub>2</sub> massively activates the ring and water ionizes the intermediate rapidly. Monobromination requires protecting the &minus;NH<sub>2</sub> group as acetanilide, brominating with Br<sub>2</sub>/CH<sub>3</sub>COOH to yield <em>p</em>-bromoacetanilide, followed by acidic or alkaline hydrolysis.
+    </div>
+
+    <div class="trap-box">
+      <strong>Trap 4: Diazonium Salt with Potassium Iodide Needs NO Copper Catalyst!</strong><br>
+      While Sandmeyer chlorination/bromination requires CuCl/CuBr, iodination simply requires warming [ArN<sub>2</sub><sup>+</sup>] with aqueous <strong>KI</strong> alone. The iodide ion (I<sup>&minus;</sup>) is a strong enough reducing agent to initiate electron-transfer homolysis to the aryl radical directly without metal catalysis.
+    </div>
+
+    <div class="trap-box">
+      <strong>Trap 5: Cope Elimination vs Hofmann Elimination Regiochemistry</strong><br>
+      Pyrolysis of tertiary amine oxides (Cope Elimination) proceeds via a concerted <strong>5-membered cyclic transition state with syn-stereochemistry</strong>. In contrast, quaternary ammonium hydroxide pyrolysis (Hofmann Elimination) proceeds via an <strong>anti-periplanar E2 transition state</strong>. Both yield the less substituted (Hofmann) alkene.
+    </div>
+  </section>
+
+  <!-- 6. 10 PRACTICE QUESTIONS -->
+  <section id="questions">
+    <h2>6. JEE Advanced Practice Problems</h2>
+
+    <details>
+      <summary>Q1 (Conceptual): Why is trimethylamine less basic than dimethylamine in water despite having three +I methyl groups?</summary>
+      <div class="solution">
+        <strong>Explanation:</strong> Basicity in aqueous solution depends on the stabilization of the conjugate cation [R<sub>n</sub>NH<sub>4-n</sub>]<sup>+</sup>. While trimethylamine has three +I groups increasing electron density, its conjugate cation <code>(CH<sub>3</sub>)<sub>3</sub>NH<sup>+</sup></code> has only <em>one</em> N&minus;H bond capable of forming hydrogen bonds with water and suffers from steric crowding that shields the positive charge from water molecules. In contrast, <code>(CH<sub>3</sub>)<sub>2</sub>NH<sub>2</sub><sup>+</sup></code> has two N&minus;H bonds available for extensive hydration. The hydration energy loss in (CH<sub>3</sub>)<sub>3</sub>N outweighs the marginal +I gain, rendering (CH<sub>3</sub>)<sub>2</sub>NH the stronger base.
+      </div>
+    </details>
+
+    <details>
+      <summary>Q2 (Conceptual): What accounts for the non-resolvability of chiral ethylmethylamine at 25&deg;C?</summary>
+      <div class="solution">
+        <strong>Explanation:</strong> Ethylmethylamine [CH<sub>3</sub>CH<sub>2</sub>&minus;NH&minus;CH<sub>3</sub>] possesses an sp<sup>3</sup> hybridized nitrogen with three distinct groups and one lone pair, making it technically chiral. However, it undergoes rapid <strong>pyramidal inversion</strong> (umbrella inversion) through a planar sp<sup>2</sup>-hybridized transition state. Because the activation barrier is low (~25 kJ/mol), interconversion between enantiomers occurs millions of times per second at room temperature, producing a non-separable racemic mixture. (Note: Quaternary ammonium salts [N(R<sub>1</sub>)(R<sub>2</sub>)(R<sub>3</sub>)(R<sub>4</sub>)]<sup>+</sup> or Tr&ouml;ger's base cannot invert and are resolvable).
+      </div>
+    </details>
+
+    <details>
+      <summary>Q3 (Conceptual): Explain why azo coupling with phenol requires pH 9&ndash;10, whereas coupling with aniline requires pH 4&ndash;5.</summary>
+      <div class="solution">
+        <strong>Explanation:</strong> The arenediazonium ion [ArN<sub>2</sub><sup>+</sup>] is a weak electrophile and requires a strongly activated ring for attack.
+        <br>&bull; <em>Phenol:</em> At pH 9&ndash;10, phenol is converted to phenoxide ion (PhO<sup>&minus;</sup>), whose +M activating effect is far superior to neutral PhOH. Above pH 10, the diazonium ion reacts with hydroxide to form non-electrophilic diazoate [Ar&minus;N=N&minus;O<sup>&minus;</sup>].
+        <br>&bull; <em>Aniline:</em> At pH 4&ndash;5, aniline exists primarily as unprotonated, nucleophilic free base PhNH<sub>2</sub>. If pH drops below 3, aniline is converted to unreactive anilinium ion PhNH<sub>3</sub><sup>+</sup>. If pH is basic (&gt;7), coupling occurs on the nitrogen atom rather than the aromatic carbon, forming diazoamino compounds (triazenes).
+      </div>
+    </details>
+
+    <details>
+      <summary>Q4 (Conceptual): Why does Gabriel Phthalimide synthesis fail for the preparation of aromatic primary amines like aniline?</summary>
+      <div class="solution">
+        <strong>Explanation:</strong> The second step of Gabriel synthesis requires an S<sub>N</sub>2 displacement of the halide by the bulky phthalimide anion. Aryl halides (such as chlorobenzene) do not undergo S<sub>N</sub>2 reactions due to:
+        <br>1. Partial double-bond character of the C&minus;X bond arising from resonance with the benzene ring.
+        <br>2. Electrostatic repulsion between the nucleophile and the electron-rich aromatic &pi;-cloud.
+        <br>3. Inability to achieve backside attack with inversion on an sp<sup>2</sup> carbon.
+      </div>
+    </details>
+
+    <details>
+      <summary>Q5 (Product Prediction): Identify product P: (R)-2-phenylpropanamide + Br<sub>2</sub> + KOH (&Delta;) &rarr; P.</summary>
+      <div class="solution">
+        <strong>Answer:</strong> (R)-1-phenylethanamine [Ph&minus;CH(CH<sub>3</sub>)&minus;NH<sub>2</sub>].
+        <br><strong>Explanation:</strong> This is the Hofmann bromamide degradation. The migrating group (the chiral &alpha;-phenylethyl group) migrates intramolecularly to the electron-deficient nitrogen in a concerted step. Hence, the migration occurs with <strong>100% retention of stereochemical configuration</strong>.
+      </div>
+    </details>
+
+    <details>
+      <summary>Q6 (Product Prediction): Aniline + NaNO<sub>2</sub> + HCl (0&ndash;5&deg;C) followed by reaction with HBF<sub>4</sub> gives solid A. Heating solid A with NaNO<sub>2</sub> in presence of Cu powder gives product B. Identify A and B.</summary>
+      <div class="solution">
+        <strong>Answer:</strong> A = Benzenediazonium fluoroborate [PhN<sub>2</sub><sup>+</sup> BF<sub>4</sub><sup>&minus;</sup>], B = Nitrobenzene [PhNO<sub>2</sub>].
+        <br><strong>Explanation:</strong> Diazotization followed by addition of fluoroboric acid precipitates the stable, water-insoluble arenediazonium fluoroborate salt. Heating this isolated salt with aqueous sodium nitrite in the presence of catalytic copper powder replaces the diazonium group with a nitro group via a radical pathway.
+      </div>
+    </details>
+
+    <details>
+      <summary>Q7 (Product Prediction): What is the major alkene formed when N,N,N-trimethyl-2-pentanammonium hydroxide is heated?</summary>
+      <div class="solution">
+        <strong>Answer:</strong> 1-Pentene.
+        <br><strong>Explanation:</strong> Pyrolysis of quaternary ammonium hydroxides follows the <strong>Hofmann elimination rule</strong>. The sterically demanding leaving group [&minus;N(CH<sub>3</sub>)<sub>3</sub>] creates high steric strain in the anti-periplanar conformation needed to remove the more substituted &beta;-proton (C3). Thus, base abstracts the most acidic, least hindered &beta;-proton from C1, yielding the terminal alkene (1-pentene) as the major product rather than the Zaitsev alkene (2-pentene).
+      </div>
+    </details>
+
+    <details>
+      <summary>Q8 (Multi-Step): Benzene &rarr; [HNO<sub>3</sub>/H<sub>2</sub>SO<sub>4</sub>] &rarr; A &rarr; [Cl<sub>2</sub>/FeCl<sub>3</sub>] &rarr; B &rarr; [Sn/HCl] &rarr; C &rarr; [NaNO<sub>2</sub>/HCl, 0&ndash;5&deg;C] &rarr; D &rarr; [H<sub>3</sub>PO<sub>2</sub>/H<sub>2</sub>O] &rarr; E. Identify E.</summary>
+      <div class="solution">
+        <strong>Answer:</strong> Chlorobenzene.
+        <br><strong>Steps:</strong>
+        <br>1. Benzene &rarr; Nitrobenzene (A).
+        <br>2. Nitro group is meta-directing: Nitrobenzene + Cl<sub>2</sub>/FeCl<sub>3</sub> &rarr; 1-chloro-3-nitrobenzene (B).
+        <br>3. Selective reduction: B + Sn/HCl &rarr; 3-chloroaniline (C).
+        <br>4. Diazotization: C + NaNO<sub>2</sub>/HCl &rarr; 3-chlorobenzenediazonium chloride (D).
+        <br>5. Reductive deamination: D + H<sub>3</sub>PO<sub>2</sub> removes the &minus;N<sub>2</sub><sup>+</sup> group replacing it with &minus;H, yielding chlorobenzene (E).
+      </div>
+    </details>
+
+    <details>
+      <summary>Q9 (Comparison / Multi-Factor): Arrange the following in decreasing order of pKb: (I) Aniline, (II) p-Nitroaniline, (III) p-Toluidine, (IV) p-Methoxyaniline.</summary>
+      <div class="solution">
+        <strong>Answer:</strong> II &gt; I &gt; III &gt; IV.
+        <br><strong>Explanation:</strong> Remember that <strong>higher pKb means weaker basicity</strong>.
+        <br>&bull; Basicity order: <em>p</em>-Methoxyaniline (IV, strong +M) &gt; <em>p</em>-Toluidine (III, +I and hyperconjugation) &gt; Aniline (I) &gt; <em>p</em>-Nitroaniline (II, powerful &minus;M and &minus;I deactivates lone pair).
+        <br>&bull; Inverting this to find pKb (least basic has highest pKb): <strong>II &gt; I &gt; III &gt; IV</strong>.
+      </div>
+    </details>
+
+    <details>
+      <summary>Q10 (Multi-Step Synthesis): Cyclohexanecarboxamide is treated with: (i) Br<sub>2</sub>/KOH (&Delta;), (ii) excess CH<sub>3</sub>I, (iii) wet Ag<sub>2</sub>O and heat. Predict the final product.</summary>
+      <div class="solution">
+        <strong>Answer:</strong> Cyclohexene.
+        <br><strong>Steps:</strong>
+        <br>1. Cyclohexanecarboxamide undergoes Hofmann degradation to lose the carbonyl carbon, producing <strong>cyclohexanamine</strong>.
+        <br>2. Exhaustive methylation with excess CH<sub>3</sub>I converts it to <strong>N,N,N-trimethylcyclohexylammonium iodide</strong>.
+        <br>3. Wet Ag<sub>2</sub>O exchanges iodide for hydroxide, producing the quaternary ammonium hydroxide. Subsequent heating triggers anti-periplanar E2 elimination to yield <strong>cyclohexene</strong>, trimethylamine, and water.
+      </div>
+    </details>
+  </section>
+
+  <!-- 7. RELATED CHAPTERS -->
+  <section id="related">
+    <h2>7. Related Chapters</h2>
+    <div class="related-links">
+      <a href="../class12/Haloalkanes.html" class="related-chip">Haloalkanes &amp; Haloarenes</a>
+      <a href="../class12/AlcoholsPhenolsEthers.html" class="related-chip">Alcohols, Phenols &amp; Ethers</a>
+      <a href="../class12/AldehydesKetones.html" class="related-chip">Aldehydes &amp; Ketones</a>
+      <a href="../class12/CarboxylicAcidsDerivatives.html" class="related-chip">Carboxylic Acids &amp; Derivatives</a>
+      <a href="../class11/GOC.html" class="related-chip">General Organic Chemistry (GOC)</a>
+    </div>
+  </section>
+
+  <!-- 8. JEE ADVANCED TREND SECTION -->
+  <section id="trends">
+    <h2>8. JEE Advanced Historical Trends</h2>
+    <p>Year-wise question frequency for this chapter in JEE Advanced papers:</p>
+    <div id="trend-container">No verified statistical question breakdown available for this session.</div>
+  </section>
+
+  <footer>
+    OrgChemMap &bull; Advanced IIT JEE Preparation Resource &bull; Class 12 Chemistry
+  </footer>
+
+  <script>
+    // JEE Advanced Trend Rendering Script
+    const STATS = {};
+
+    function renderTrends() {
+      const container = document.getElementById("trend-container");
+      const years = Object.keys(STATS);
+      if (years.length === 0) {
+        container.innerHTML = "<em>No question frequency data currently registered.</em>";
+        return;
+      }
+      let html = "<div style='display: flex; gap: 1rem; align-items: flex-end; height: 120px; padding: 1rem 0;'>";
+      years.forEach(year => {
+        const count = STATS[year];
+        const height = count * 28;
+        html += `
+          <div style="text-align: center; font-size: 0.8rem;">
+            <div style="background: var(--accent-color); width: 28px; height: ${height}px; border-radius: 4px 4px 0 0; margin: 0 auto;"></div>
+            <div style="margin-top: 0.4rem; color: #fff;">${year}</div>
+            <div style="color: var(--text-muted); font-size: 0.75rem;">(${count})</div>
+          </div>
+        `;
+      });
+      html += "</div>";
+      container.innerHTML = html;
+    }
+
+    renderTrends();
+  </script>
+</body>
+</html>
