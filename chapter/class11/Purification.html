@@ -159,4 +159,433 @@
     .order-header {
       font-weight: 600;
       color: var(--accent);
-      margin-
+      margin-bottom: 0.35rem;
+    }
+
+    details {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 0.85rem 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--heading);
+      user-select: none;
+    }
+
+    summary:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .solution {
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+      background-color: var(--bg);
+      font-size: 0.95rem;
+    }
+
+    .formula {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      background: var(--code-bg);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .related-links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 0.8rem;
+      display: inline-block;
+    }
+
+    .related-links a:hover {
+      text-decoration: underline;
+    }
+
+    .stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    .stat-pill {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .stat-pill span {
+      color: var(--accent);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="../../index.html" class="back-link">&larr; Back to Dashboard</a>
+      <h1>Purification &amp; Quantitative/Qualitative Analysis</h1>
+      <div class="meta">Class 11 &bull; Practical Organic Chemistry &bull; Core JEE Advanced Focus</div>
+    </header>
+
+    <section>
+      <h2>1. Core Concepts Summary</h2>
+      <p>
+        Purification techniques isolate pure organic substrates based on discrepancies in phase partition, volatility, solubility, and vapor pressure. <strong>Qualitative analysis</strong> breaks organic matrices down via active elemental transformations (e.g., Lassaigne&rsquo;s reductive fusion into ionic species) to identify N, S, halogens, and phosphorus via precipitation and coordination complexes. <strong>Quantitative analysis</strong> employs stoichiometrically complete transformations (Liebig combustion, Kjeldahl digestion, Dumas combustion, and Carius mineralizations) to determine empirical/molecular formulations.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Key Processes &amp; Stepwise Mechanisms</h2>
+
+      <h3>A. Lassaigne&rsquo;s Sodium Fusion Extract Preparation</h3>
+      <p>Insoluble covalent heteroatoms (N, S, X) are converted to water-soluble ionic sodium salts by reductive thermal cleavage with metallic sodium.</p>
+      <div class="card">
+        <ol style="margin-left: 1.5rem; margin-bottom: 0.75rem;">
+          <li><strong>Thermal Cleavage &amp; Fusion:</strong> Na + C + N &rarr; NaCN; 2Na + S &rarr; Na<sub>2</sub>S; Na + X &rarr; NaX (where X = Cl, Br, I).</li>
+          <li><strong>Combined N &amp; S Extraction:</strong> If both N and S are present, Na + C + N + S &rarr; NaSCN (sodium thiocyanate). If excess Na is used: NaSCN + 2Na &rarr; NaCN + Na<sub>2</sub>S.</li>
+          <li><strong>Acidification/Boiling step:</strong> Before testing halogens, extract must be boiled with concentrated HNO<sub>3</sub> to decompose CN<sup>&minus;</sup> and S<sup>2&minus;</sup> into HCN&uarr; and H<sub>2</sub>S&uarr;, preventing precipitation of interfering AgCN and Ag<sub>2</sub>S.</li>
+        </ol>
+        <p><strong>Rate/Efficiency Determiner:</strong> Complete reduction during fusion. Unreacted metallic Na must be quenched in ethanol/water before leaching.</p>
+      </div>
+
+      <h3>B. Detection Reactions Mechanism Flow</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Target</th>
+              <th>Stepwise Transformation Sequence</th>
+              <th>Rate / Equilibrium Favourability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Nitrogen (Prussian Blue)</strong></td>
+              <td>
+                1. Fe<sup>2+</sup> + 6CN<sup>&minus;</sup> &rarr; [Fe(CN)<sub>6</sub>]<sup>4&minus;</sup><br>
+                2. Fe<sup>2+</sup> oxidized to Fe<sup>3+</sup> via dissolved O<sub>2</sub> or added dil. H<sub>2</sub>SO<sub>4</sub>/FeCl<sub>3</sub>.<br>
+                3. 4Fe<sup>3+</sup> + 3[Fe(CN)<sub>6</sub>]<sup>4&minus;</sup> + xH<sub>2</sub>O &rarr; <strong>Fe<sub>4</sub>[Fe(CN)<sub>6</sub>]<sub>3</sub>&middot;xH<sub>2</sub>O&darr;</strong> (Ferric ferrocyanide / Prussian Blue).
+              </td>
+              <td>Requires alkaline conditions initially to form hexacyanoferrate(II), followed by mineral acid (H<sub>2</sub>SO<sub>4</sub>) to prevent precipitation of Fe(OH)<sub>2</sub>/Fe(OH)<sub>3</sub>.</td>
+            </tr>
+            <tr>
+              <td><strong>Sulfur (Nitroprusside &amp; Lead)</strong></td>
+              <td>
+                1. S<sup>2&minus;</sup> + [Fe(CN)<sub>5</sub>(NO)]<sup>2&minus;</sup> &rarr; <strong>[Fe(CN)<sub>5</sub>(NOS)]<sup>4&minus;</sup></strong> (Thionitroprusside, Deep Violet).<br>
+                2. S<sup>2&minus;</sup> + (CH<sub>3</sub>COO)<sub>2</sub>Pb &rarr; <strong>PbS&darr;</strong> (Black precipitate) in acetic acid medium.
+              </td>
+              <td>Nitroprusside complex formation requires alkaline pH; acidic media shifts equilibrium back to reactants and evolves H<sub>2</sub>S gas.</td>
+            </tr>
+            <tr>
+              <td><strong>Nitrogen + Sulfur (Thiocyanate)</strong></td>
+              <td>
+                1. Fe<sup>3+</sup> + 3SCN<sup>&minus;</sup> &rarr; <strong>[Fe(SCN)<sub>3</sub>]</strong> or [Fe(H<sub>2</sub>O)<sub>5</sub>(SCN)]<sup>2+</sup> (Blood-red coloration).
+              </td>
+              <td>Occurs only under limited Na fusion. Excess Na decomposes SCN<sup>&minus;</sup> into discrete CN<sup>&minus;</sup> and S<sup>2&minus;</sup>.</td>
+            </tr>
+            <tr>
+              <td><strong>Phosphorus (Ammonium Molybdate)</strong></td>
+              <td>
+                1. Organic P + Na<sub>2</sub>O<sub>2</sub> &rarr; Na<sub>3</sub>PO<sub>4</sub> (Oxidation to orthophosphate).<br>
+                2. H<sub>3</sub>PO<sub>4</sub> + 12(NH<sub>4</sub>)<sub>2</sub>MoO<sub>4</sub> + 21HNO<sub>3</sub> &rarr; <strong>(NH<sub>4</sub>)<sub>3</sub>PO<sub>4</sub>&middot;12MoO<sub>3</sub>&darr;</strong> (Canary Yellow) + 21NH<sub>4</sub>NO<sub>3</sub> + 12H<sub>2</sub>O.
+              </td>
+              <td>Favoured by strong warming with excess concentrated HNO<sub>3</sub>.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>C. Kjeldahl Digestion &amp; Distillation</h3>
+      <div class="card">
+        <p><strong>Step 1: Digestion (RDS):</strong> Organic Nitrogen &rarr; (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub> using conc. H<sub>2</sub>SO<sub>4</sub>.</p>
+        <p><em>Catalysts:</em> CuSO<sub>4</sub> (catalyst), K<sub>2</sub>SO<sub>4</sub> (elevates boiling point of H<sub>2</sub>SO<sub>4</sub>).</p>
+        <p><strong>Step 2: Neutralization &amp; Distillation:</strong> (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub> + 2NaOH &rarr; Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O + 2NH<sub>3</sub>&uarr;.</p>
+        <p><strong>Step 3: Absorption &amp; Back/Direct Titration:</strong> NH<sub>3</sub> is absorbed into known excess standard H<sub>2</sub>SO<sub>4</sub> (or boric acid) and back-titrated against standard NaOH.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Reactions, Reagents, and Estimation Methods</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Method / Test</th>
+              <th>Reagents &amp; Conditions</th>
+              <th>End Product / Observable Change</th>
+              <th>Stoichiometric Formula / Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Liebig Combustion (C &amp; H)</strong></td>
+              <td>Sample + excess CuO, &Delta; (dry O<sub>2</sub> stream)</td>
+              <td>CO<sub>2</sub> absorbed in KOH; H<sub>2</sub>O absorbed in anhyd. CaCl<sub>2</sub></td>
+              <td>%C = <span class="formula">(12/44) &times; (m<sub>CO2</sub> / m) &times; 100</span><br>%H = <span class="formula">(2/18) &times; (m<sub>H2O</sub> / m) &times; 100</span></td>
+            </tr>
+            <tr>
+              <td><strong>Dumas Method (N)</strong></td>
+              <td>Sample + CuO heated in CO<sub>2</sub> atmosphere over hot Cu mesh gauge</td>
+              <td>N<sub>2</sub> gas collected over 50% KOH in a nitrometer</td>
+              <td>%N = <span class="formula">(28 / 22400) &times; [V<sub>N2 (STP)</sub> / m] &times; 100</span>; KOH absorbs all excess CO<sub>2</sub>.</td>
+            </tr>
+            <tr>
+              <td><strong>Kjeldahl Method (N)</strong></td>
+              <td>1. Conc. H<sub>2</sub>SO<sub>4</sub>, K<sub>2</sub>SO<sub>4</sub>, CuSO<sub>4</sub> (&Delta;)<br>2. Excess NaOH distillation</td>
+              <td>Liberated NH<sub>3</sub> neutralizes standard acid</td>
+              <td>%N = <span class="formula">[1.4 &times; N &times; (V<sub>1</sub> &minus; V<sub>2</sub>)] / m</span>; Fails for nitro, azo, and ring-nitrogen compounds.</td>
+            </tr>
+            <tr>
+              <td><strong>Carius Method (Halogens)</strong></td>
+              <td>Sample + fuming HNO<sub>3</sub> + solid AgNO<sub>3</sub> (&Delta; in sealed Carius tube)</td>
+              <td>AgX precipitate (AgCl: White, AgBr: Pale Yellow, AgI: Bright Yellow)</td>
+              <td>%X = <span class="formula">[M<sub>X</sub> / M<sub>AgX</sub>] &times; (m<sub>AgX</sub> / m) &times; 100</span></td>
+            </tr>
+            <tr>
+              <td><strong>Carius Method (Sulfur)</strong></td>
+              <td>Sample + fuming HNO<sub>3</sub> (or Na<sub>2</sub>O<sub>2</sub>) followed by excess BaCl<sub>2</sub></td>
+              <td>Insoluble BaSO<sub>4</sub> white precipitate</td>
+              <td>%S = <span class="formula">(32 / 233) &times; (m<sub>BaSO4</sub> / m) &times; 100</span></td>
+            </tr>
+            <tr>
+              <td><strong>Phosphorus Estimation</strong></td>
+              <td>Fuming HNO<sub>3</sub> oxidation &rarr; Magnesia mixture [MgCl<sub>2</sub> + NH<sub>4</sub>Cl + NH<sub>4</sub>OH] &rarr; ignite</td>
+              <td>MgNH<sub>4</sub>PO<sub>4</sub> &rarr; &Delta; &rarr; <strong>Mg<sub>2</sub>P<sub>2</sub>O<sub>7</sub></strong> (Pyrophosphate residue)</td>
+              <td>%P = <span class="formula">(62 / 222) &times; (m<sub>Mg2P2O7</sub> / m) &times; 100</span></td>
+            </tr>
+            <tr>
+              <td><strong>Beilstein Test</strong></td>
+              <td>Clean Cu wire heated with sample in non-luminous flame</td>
+              <td>Green or bluish-green flame due to volatile copper halides (CuX<sub>2</sub>)</td>
+              <td>Qualitative screening only. Fails to distinguish X; gives false positive with urea/thiourea.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Comparative Physical Orders &amp; Underlying Principles</h2>
+
+      <div class="order-box">
+        <div class="order-header">Chromatographic Adsorption Affinity (Silica gel / Alumina Stationary Phase)</div>
+        <p><strong>Order:</strong> Hydrocarbons (alkanes) &lt; Alkenes &lt; Dienes &lt; Aromatic Hydrocarbons &lt; Halocarbons &lt; Ethers &lt; Esters &lt; Ketones &lt; Aldehydes &lt; Amines &lt; Alcohols &lt; Phenols &lt; Carboxylic Acids.</p>
+        <p><strong>Reason:</strong> Adsorption strength on polar stationary surfaces increases with compound dipole moment, hydrogen-bonding capability, and Lewis-base coordination strength. Less polar eluents wash down nonpolar fractions faster (higher R<sub>f</sub> value).</p>
+      </div>
+
+      <div class="order-box">
+        <div class="order-header">Steam Volatility (Intramolecular vs. Intermolecular H-Bonding)</div>
+        <p><strong>Order of Steam Distillation Rate:</strong> <em>o</em>-Nitrophenol &gt; <em>p</em>-Nitrophenol (or <em>m</em>-nitrophenol).</p>
+        <p><strong>Reason:</strong> Chelation (intramolecular H-bonding) in <em>o</em>-nitrophenol suppresses association with surrounding solvent and prevents self-oligomerization, increasing its partial vapor pressure (P<sub>o</sub>). <em>p</em>-Nitrophenol forms extensive intermolecular hydrogen-bond networks, raising its boiling point and diminishing volatility in steam.</p>
+      </div>
+
+      <div class="order-box">
+        <div class="order-header">Silver Halide Solubility in Aqueous Ammonia (NH<sub>4</sub>OH)</div>
+        <p><strong>Order of Dissolution:</strong> AgCl (completely soluble in dilute NH<sub>4</sub>OH) &gt; AgBr (sparingly soluble in concentrated NH<sub>4</sub>OH) &gt; AgI (completely insoluble in NH<sub>4</sub>OH).</p>
+        <p><strong>Reason:</strong> K<sub>sp</sub> drops drastically: K<sub>sp</sub>(AgCl) &approx; 1.8 &times; 10<sup>&minus;10</sup> &gt; K<sub>sp</sub>(AgBr) &approx; 5.4 &times; 10<sup>&minus;13</sup> &gt; K<sub>sp</sub>(AgI) &approx; 8.5 &times; 10<sup>&minus;17</sup>. The formation constant (&beta;<sub>2</sub>) for [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup> is only sufficient to overcome the lattice free energy of AgCl and, to an extent, AgBr with excess ammonia.</p>
+      </div>
+
+      <div class="order-box">
+        <div class="order-header">R<sub>f</sub> (Retardation Factor) in Normal-Phase Thin-Layer Chromatography</div>
+        <p><strong>Order:</strong> Polar Analytes &lt; Moderately Polar Analytes &lt; Nonpolar Analytes (R<sub>f</sub> &rarr; 1).</p>
+        <p><strong>Reason:</strong> R<sub>f</sub> = (distance traveled by substance) / (distance traveled by solvent front). Because the stationary phase is polar (silica gel with Si&minus;OH groups), polar substrates interact more strongly via dipole-dipole and H-bonding interactions, resulting in minimal migration compared to non-polar analytes.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Common Traps &amp; Exceptions (JEE Advanced Pitfalls)</h2>
+
+      <div class="trap-card">
+        <div class="trap-title">TRAP 1: The Kjeldahl Structural Blacklist</div>
+        Compounds containing <strong>Nitro (&minus;NO<sub>2</sub>)</strong>, <strong>Diazo / Azo (&minus;N=N&minus;)</strong>, or <strong>Ring-bound Nitrogen (Pyridine, Quinoline, Pyrrole, Piperidine)</strong> do NOT quantitatively yield (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub> on digestion with conc. H<sub>2</sub>SO<sub>4</sub>. Nitrogen in these frameworks is either oxidized to nitrogen oxides/N<sub>2</sub> gas or cannot be cleaved into ammonia under regular Kjeldahl conditions.
+      </div>
+
+      <div class="trap-card">
+        <div class="trap-title">TRAP 2: Omission of Boiling Lassaigne Extract with Conc. HNO<sub>3</sub></div>
+        If a sample contains both Nitrogen and Halogens, adding AgNO<sub>3</sub> directly to the alkaline extract without boiling with conc. HNO<sub>3</sub> gives a <strong>curdy white precipitate of AgCN</strong> (or black Ag<sub>2</sub>S if sulfur is present). This mimics AgCl and gives a false positive for chlorine. Nitric acid decomposes cyanide and sulfide ions:
+        <br><span class="formula">NaCN + HNO<sub>3</sub> &rarr; NaNO<sub>3</sub> + HCN&uarr;</span> and <span class="formula">Na<sub>2</sub>S + 2HNO<sub>3</sub> &rarr; 2NaNO<sub>3</sub> + H<sub>2</sub>S&uarr;</span>.
+      </div>
+
+      <div class="trap-card">
+        <div class="trap-title">TRAP 3: False Positives in Beilstein's Wire Test</div>
+        Beilstein test is extremely sensitive to halogens, but compounds like <strong>Urea, Thiourea, Pyridine derivatives, and Bipyridyls</strong> also yield volatile copper cyanide complexes that impart a transient brilliant green/blue flame without containing any halogen atoms.
+      </div>
+
+      <div class="trap-card">
+        <div class="trap-title">TRAP 4: Condition for Steam Distillation Suitability</div>
+        Steam distillation requires an organic substance to be <strong>completely immiscible with water</strong>, have an appreciable vapor pressure (typically &ge; 10&ndash;15 mm Hg at 373 K), and be thermally stable at ~100 &deg;C. Total pressure is <span class="formula">P<sub>total</sub> = P<sub>water</sub> + P<sub>organic</sub> = 1 atm</span>; hence the mixture distills at a temperature lower than the normal boiling points of either water or the pure organic liquid.
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Practice Questions (JEE Advanced Level)</h2>
+
+      <details>
+        <summary>Q1. [Conceptual] Why is dilute H<sub>2</sub>SO<sub>4</sub> preferred over dilute HCl or HNO<sub>3</sub> for acidifying the Lassaigne extract when detecting Nitrogen as Prussian Blue?</summary>
+        <div class="solution">
+          <strong>Answer:</strong> HCl and HNO<sub>3</sub> interfere directly with complexation and redox steps.<br>
+          <strong>Reasoning:</strong>
+          1. <strong>HNO<sub>3</sub></strong> is a strong oxidizing agent; it oxidizes Fe<sup>2+</sup> to Fe<sup>3+</sup> uncontrollably and can oxidize unreacted cyanide (CN<sup>&minus;</sup>) or generate thiocyanate species if sulfur is present.<br>
+          2. <strong>HCl</strong> introduces Cl<sup>&minus;</sup> ions which can form yellow tetrachloroferrate(III) complexes [FeCl<sub>4</sub>]<sup>&minus;</sup>, masking the true Prussian Blue Fe<sub>4</sub>[Fe(CN)<sub>6</sub>]<sub>3</sub> precipitate.<br>
+          3. <strong>Dilute H<sub>2</sub>SO<sub>4</sub></strong> provides non-interfering SO<sub>4</sub><sup>2&minus;</sup> ions, purely serving to dissolve the unwanted Fe(OH)<sub>2</sub> and Fe(OH)<sub>3</sub> precipitates without interfering side reactions.
+        </div>
+      </details>
+
+      <details>
+        <summary>Q2. [Conceptual] Under what specific conditions does Lassaigne's test for an organic compound containing both N and S yield a Prussian blue precipitate instead of a blood-red color?</summary>
+        <div class="solution">
+          <strong>Answer:</strong> When fusion is performed with an <strong>excess of metallic sodium</strong>.<br>
+          <strong>Reasoning:</strong> With equimolar or deficient sodium, sodium thiocyanate (NaSCN) forms, giving blood-red [Fe(SCN)<sub>3</sub>] with Fe<sup>3+</sup>. However, when metallic sodium is in excess, it reduces NaSCN further:
+          <br><span class="formula">NaSCN + 2Na &rarr; NaCN + Na<sub>2</sub>S</span><br>
+          The generated NaCN then undergoes classic hexacyanoferrate(II) formation followed by Prussian blue precipitation upon reaction with iron ions.
+        </div>
+      </details>
+
+      <details>
+        <summary>Q3. [Conceptual] Explain why hydrazine (NH<sub>2</sub>&minus;NH<sub>2</sub>) and hydroxylamine (NH<sub>2</sub>OH) fail to give the Lassaigne test for nitrogen despite containing nitrogen atoms.</summary>
+        <div class="solution">
+          <strong>Answer:</strong> Both compounds <strong>lack carbon atoms</strong>.<br>
+          <strong>Reasoning:</strong> The Lassaigne test relies on the simultaneous presence of carbon and nitrogen to synthesize cyanide ions via the reaction:
+          <br><span class="formula">Na + C + N &rarr; NaCN</span><br>
+          Without carbon, hydrazine simply decomposes/volatilizes or forms sodamide/ammonia without producing NaCN, giving zero Prussian Blue precipitate.
+        </div>
+      </details>
+
+      <details>
+        <summary>Q4. [Conceptual] In paper chromatography, what acts as the stationary phase and mobile phase respectively, and what is the primary separation mechanism?</summary>
+        <div class="solution">
+          <strong>Answer:</strong> Stationary phase: <strong>Water trapped in the cellulose fibers</strong> of the paper pores. Mobile phase: Developing organic solvent. Mechanism: <strong>Liquid-liquid partition chromatography</strong>.<br>
+          <strong>Reasoning:</strong> Although the paper is solid cellulose, the hydroxyl networks tightly retain a stable aqueous monolayer. The migrating analytes continuously partition between this bound water layer and the ascending mobile organic solvent phase according to their partition coefficients.
+        </div>
+      </details>
+
+      <details>
+        <summary>Q5. [Product Prediction] In a Carius estimation of halogens, an organic compound containing bromine is heated with fuming HNO<sub>3</sub> and excess AgNO<sub>3</sub>. What is the formula of the precipitate, its color, and its behavior upon addition of concentrated NH<sub>4</sub>OH?</summary>
+        <div class="solution">
+          <strong>Answer:</strong> Precipitate: <strong>AgBr</strong>; Color: <strong>Pale yellow</strong>; Behavior: <strong>Sparingly soluble</strong> in concentrated NH<sub>4</sub>OH.<br>
+          <strong>Reasoning:</strong> AgBr dissolves only partially in conc. NH<sub>4</sub>OH to establish equilibrium with the diamminesilver(I) complex ion:
+          <br><span class="formula">AgBr(s) + 2NH<sub>3</sub>(aq) &rightleftharpoons; [Ag(NH<sub>3</sub>)<sub>2</sub>]<sup>+</sup>(aq) + Br<sup>&minus;</sup>(aq)</span>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Q6. [Product Prediction] An organic sulfur-bearing compound is fused with sodium peroxide (Na<sub>2</sub>O<sub>2</sub>), extracted with water, acidified with dilute HCl, and treated with barium chloride. Identify the ionic transformations and final precipitate.</summary>
+        <div class="solution">
+          <strong>Answer:</strong> The sulfur oxidizes to sulfate (SO<sub>4</sub><sup>2&minus;</sup>), yielding a insoluble white precipitate of <strong>barium sulfate (BaSO<sub>4</sub>)</strong>.<br>
+          <strong>Equations:</strong><br>
+          1. Organic [S] + Na<sub>2</sub>O<sub>2</sub> &rarr; Na<sub>2</sub>SO<sub>4</sub><br>
+          2. Na<sub>2</sub>SO<sub>4</sub> + BaCl<sub>2</sub> &rarr; <strong>BaSO<sub>4</sub>&darr;</strong> (white, completely insoluble in hot dilute mineral acids) + 2NaCl.
+        </div>
+      </details>
+
+      <details>
+        <summary>Q7. [Product Prediction] Treatment of Lassaigne extract with fresh sodium nitroprusside yields an intense violet chromophore. Write the complete coordination formula of the reagent and the violet complex formed.</summary>
+        <div class="solution">
+          <strong>Answer:</strong> Reagent: <strong>[Fe(CN)<sub>5</sub>(NO)]<sup>2&minus;</sup></strong> (Sodium nitroprusside, containing Fe<sup>2+</sup> and nitrosyl NO<sup>+</sup>);<br>
+          Violet complex: <strong>[Fe(CN)<sub>5</sub>(NOS)]<sup>4&minus;</sup></strong> (Sodium thionitroprusside).<br>
+          <strong>Equation:</strong> Na<sub>2</sub>S + Na<sub>2</sub>[Fe(CN)<sub>5</sub>(NO)] &rarr; Na<sub>4</sub>[Fe(CN)<sub>5</sub>(NOS)].
+        </div>
+      </details>
+
+      <details>
+        <summary>Q8. [Multi-step Quantitative] 0.25 g of an organic monocarboxylic acid containing only C, H, and O yielded 0.3667 g of CO<sub>2</sub> and 0.1500 g of H<sub>2</sub>O in a Liebig combustion tube. Determine the empirical formula of the compound.</summary>
+        <div class="solution">
+          <strong>Answer:</strong> Empirical formula = <strong>C<sub>2</sub>H<sub>4</sub>O</strong>.<br>
+          <strong>Stepwise Calculation:</strong><br>
+          1. Mass of Carbon = <span class="formula">(12 / 44) &times; 0.3667 = 0.1000 g</span><br>
+          &rArr; %C = <span class="formula">(0.1000 / 0.25) &times; 100 = 40.0%</span><br>
+          2. Mass of Hydrogen = <span class="formula">(2 / 18) &times; 0.1500 = 0.0167 g</span><br>
+          &rArr; %H = <span class="formula">(0.0167 / 0.25) &times; 100 = 6.67%</span><br>
+          3. %Oxygen = <span class="formula">100 &minus; (40.0 + 6.67) = 53.33%</span><br>
+          4. Molar ratios:
+          <ul>
+            <li>C: 40.0 / 12 = 3.33</li>
+            <li>H: 6.67 / 1 = 6.67</li>
+            <li>O: 53.33 / 16 = 3.33</li>
+          </ul>
+          5. Divide by lowest (3.33): C = 1, H = 2, O = 1 &rArr; Empirical formula: <strong>CH<sub>2</sub>O</strong> (or molecular formula C<sub>2</sub>H<sub>4</sub>O<sub>2</sub> for acetic acid).
+        </div>
+      </details>
+
+      <details>
+        <summary>Q9. [Multi-step Quantitative] In a Dumas nitrogen determination, 0.20 g of an organic compound gave 24.6 cm<sup>3</sup> of moist nitrogen gas at 300 K and 760 mm Hg total pressure. The aqueous tension of water vapor at 300 K is 15 mm Hg. Calculate the percentage of nitrogen in the compound. (R = 0.0821 L atm K<sup>&minus;1</sup> mol<sup>&minus;1</sup>)</summary>
+        <div class="solution">
+          <strong>Answer:</strong> <strong>13.68%</strong> (or ~13.7%).<br>
+          <strong>Stepwise Calculation:</strong><br>
+          1. Correct for aqueous tension: <span class="formula">P<sub>dry N2</sub> = P<sub>total</sub> &minus; P<sub>aq</sub> = 760 &minus; 15 = 745 mm Hg = (745 / 760) atm &approx; 0.9803 atm</span>.<br>
+          2. Convert volume to STP (P<sub>0</sub> = 1 atm, T<sub>0</sub> = 273 K):<br>
+          <span class="formula">V<sub>0</sub> = (P &times; V &times; 273) / (760 &times; T) = (745 &times; 24.6 &times; 273) / (760 &times; 300) = 21.95 mL</span>.<br>
+          3. Calculate mass of N<sub>2</sub>:<br>
+          <span class="formula">Mass of N = (28 &times; 21.95) / 22400 = 0.02744 g</span>.<br>
+          4. Percentage of Nitrogen:<br>
+          <span class="formula">%N = (0.02744 / 0.20) &times; 100 = 13.72%</span>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Q10. [Multi-step Quantitative] 0.40 g of an organic compound was digested according to Kjeldahl's method. The evolved NH<sub>3</sub> was absorbed in 50 mL of 0.1 M H<sub>2</sub>SO<sub>4</sub>. The unreacted residual acid required 30 mL of 0.1 M NaOH for complete neutralization. Calculate the percentage of nitrogen in the compound.</summary>
+        <div class="solution">
+          <strong>Answer:</strong> <strong>24.5%</strong>.<br>
+          <strong>Stepwise Calculation:</strong><br>
+          1. Total milliequivalents of H<sub>2</sub>SO<sub>4</sub> taken = <span class="formula">Normality &times; Volume = (0.1 &times; 2) &times; 50 = 10 meq</span>.<br>
+          2. Milliequivalents of NaOH consumed in back titration = <span class="formula">0.1 &times; 30 = 3 meq</span>.<br>
+          3. Residual acid = 3 meq &rArr; Milliequivalents of H<sub>2</sub>SO<sub>4</sub> neutralized by NH<sub>3</sub> = <span class="formula">10 &minus; 3 = 7 meq</span>.<br>
+          4. Equivalents of NH<sub>3</sub> = Equivalents of Nitrogen = <span class="formula">7 &times; 10<sup>&minus;3</sup> mol</span>.<br>
+          5. Mass of Nitrogen = <span class="formula">7 &times; 10<sup>&minus;3</sup> &times; 14 = 0.098 g</span>.<br>
+          6. %N = <span class="formula">(0.098 / 0.40) &times; 100 = 24.5%</span>.
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <h2>7. Related Chapters</h2>
+      <div class="related-links">
+        <a href="../../chapter/class11/GOC.html">&rarr; General Organic Chemistry (GOC)</a>
+        <a href="../../chapter/class11/Hydrocarbons.html">&rarr; Hydrocarbons</a>
+        <a href="../../chapter/class12/Haloalkanes.html">&rarr; Haloalkanes &amp; Haloarenes</a>
+        <a href="../../chapter/class12/Amines.html">&rarr; Amines &amp; Diazonium Salts</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. JEE Advanced Trends &amp; Weightage</h2>
+      <p class="meta">Year-wise distribution of direct questions on practical purification and elemental analysis.</p>
+      <div class="stats-container" id="stats-display">
+        <!-- Rendered by JS below -->
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // JEE Advanced Past Trends (Empty STATS object as per template specifications)
+    const STATS = {};
+
+    function renderStats() {
+      const container = document.getElementById('stats-display');
+      const years = Object.keys(STATS);
+      if (years.length === 0) {
+        container.innerHTML = '<span class="meta">No specific frequency data available in this index record. Typically tested as part of multi-concept comprehension questions in Paper 1 and Paper 2.</span>';
+        return;
+      }
+      years.forEach(year => {
+        const pill = document.createElement('div');
+        pill.className = 'stat-pill';
+        pill.innerHTML = `<strong>${year}:</strong> <span>${STATS[year]} Q</span>`;
+        container.appendChild(pill);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', renderStats);
+  </script>
+</body>
+</html>
